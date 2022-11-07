@@ -1,0 +1,89 @@
+// Style the dropdown
+.nice-select {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  display: block;
+  outline: none;
+  position: relative;
+  text-align: left!important;
+  user-select: none;
+  white-space: nowrap;
+  // Arrow
+  &:after { 
+    border-bottom: 2px solid $white;
+    border-right: 2px solid $white;
+    content: '';
+    display: block; 
+    height: 10px;
+    pointer-events: none;
+    position: absolute; 
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    transition: transform .3s ease;
+    width: 10px;
+  }
+  
+  &.open {
+    &:after {
+      transform: translateY(-50%) rotate(45deg);
+    }
+    .nice-select-dropdown {
+      opacity: 1;
+      pointer-events: auto;
+      transform: scale(1);
+    }
+  }
+  &.disabled {
+    color: #ccc;
+    pointer-events: none;
+  }
+
+  .nice-select-dropdown{
+    margin-top: 4px;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transform-origin: 50% 0;
+    transform: scale(.75);
+    z-index: 9;
+    opacity: 0;
+    transition: all .3s cubic-bezier(0.5, 0, 0, 1.25), opacity .15s ease-out;
+  }
+
+  // List and options
+  .list {
+    overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-height: 210px;
+    overflow-y: auto;
+  }
+  .option {
+    cursor: pointer;
+    outline: none;
+    text-align: left;
+    &.disabled {
+      cursor: default;
+    }
+  }
+}
+
+// Use display instead of opacity for IE <= 10
+.no-csspointerevents .nice-select {
+  .nice-select-dropdown {
+    display: none;
+  }
+  &.open {
+    .nice-select-dropdown {
+      display: block;
+    }
+  }
+}
+
+.nice-select .list::-webkit-scrollbar {
+  width: 0
+}

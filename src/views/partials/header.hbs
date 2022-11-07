@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>{{title}}</title>
+	<link rel="stylesheet" href="{{assets}}/styles/main.css">
+
+	<!-- Disable tap highlight on IE -->
+	<meta name="msapplication-tap-highlight" content="no">
+
+	<!-- for Chrome on Android -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="application-name" lang="en" content="{{title}}">
+	<link rel="icon" sizes="192x192" href="{{assets}}/img/favicons/android-chrome-192x192.png">
+
+	<!-- for Safari on iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="apple-mobile-web-app-title" content="{{title}}">
+
+	<meta name="theme-color" content="#FFFFFF">
+
+	<link rel="shortcut icon" href="{{assets}}/img/favicons/favicon.ico">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{assets}}/img/favicons/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{assets}}/img/favicons/favicon-32x32.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="{{assets}}/img/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="{{assets}}/img/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="{{assets}}/img/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="{{assets}}/img/favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="{{assets}}/img/favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="{{assets}}/img/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="{{assets}}/img/favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="{{assets}}/img/favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="{{assets}}/img/favicons/apple-touch-icon-167x167.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{assets}}/img/favicons/apple-touch-icon-180x180.png">
+	<link rel="apple-touch-icon" sizes="1024x1024" href="{{assets}}/img/favicons/apple-touch-icon-1024x1024.png">
+
+	<meta name="robots" content="none">
+</head>
+<body class="{{class}}">
+
+<div class="preloader-wrap">
+	<div class="preloader">
+		<img src="assets/img/main/preloader-1.svg" alt="alt" class="preloader__img img-responsive">
+		<img src="assets/img/main/preloader-2.svg" alt="alt" class="preloader__img img-responsive">
+		<img src="assets/img/main/preloader-3.svg" alt="alt" class="preloader__img img-responsive">
+		<img src="assets/img/main/preloader-4.svg" alt="alt" class="preloader__img img-responsive">
+		<img src="assets/img/main/preloader-5.svg" alt="alt" class="preloader__img img-responsive">
+	</div>
+
+	<script src="assets/js/other/preloader.min.js"></script>
+</div>
+
+<header class="header">
+    <div class="header__container container">
+
+		<button class="header__hamburger hamburger hamburger--spring" type="button">
+			<span class="hamburger-box">
+				<span class="hamburger-inner"></span>
+			</span>
+		</button>
+
+        <a href="index.html" class="header__logo">
+            <img src="assets/img/main/logo.svg" alt="alt" class="img-responsive">
+        </a>
+
+		<div class="header__lang lang">
+			<span class="lang__current">
+				<span class="lang__flag-wrap">
+					<img src="assets/img/main/rus_sm.png" alt="alt">
+				</span>
+				RU
+			</span>
+			<div class="lang__dropdown">
+				<a href="#" class="lang__link">
+					<span class="lang__flag-wrap">
+						<img src="assets/img/main/usa_sm.png" alt="alt">
+					</span>
+					EN
+				</a>
+				<a href="#" class="lang__link">
+					<span class="lang__flag-wrap">
+						<img src="assets/img/main/kz_sm.png" alt="alt">
+					</span>
+					KZ
+				</a>
+			</div>
+		</div>
+
+        <div class="header__btns">
+            <a href="login.html" class="header__btn header__btn_login btn btn-lg btn-accent">Войти</a>
+            <a href="index.html#join" class="header__btn header__btn_register btn btn-lg btn-secondary">Регистрация</a>
+        </div>
+
+    </div>
+</header>
+
+<div class="mobile-menu">
+
+	<div class="mobile-menu__header">
+		<button class="mobile-menu__hamburger hamburger hamburger--spring is-active" type="button">
+			<span class="hamburger-box">
+				<span class="hamburger-inner"></span>
+			</span>
+		</button>
+
+		<a href="index.html" class="mobile-menu__logo">
+            <img src="assets/img/main/logo-secondary.svg" alt="alt" class="img-responsive">
+        </a>
+	</div>
+
+	<nav class="mobile-menu__nav nav-mobile-menu">
+		<ul class="nav-mobile-menu__list">
+			<li>
+				<a href="index.html#benefits">
+					<svg role="img">
+						<use href="assets/img/svg-sprite/sprite.svg#medal"></use>
+					</svg>
+					Преимущества
+				</a>
+			</li>
+			<li>
+				<a href="index.html#faq">
+					<svg role="img">
+						<use href="assets/img/svg-sprite/sprite.svg#faq"></use>
+					</svg>
+					FAQ
+				</a>
+			</li>
+			<li>
+				<a href="news.html">
+					<svg role="img">
+						<use href="assets/img/svg-sprite/sprite.svg#news"></use>
+					</svg>
+					Новости
+				</a>
+			</li>
+			<li>
+				<a href="index.html#contacts">
+					<svg role="img">
+						<use href="assets/img/svg-sprite/sprite.svg#email"></use>
+					</svg>
+					Контакты
+				</a>
+			</li>
+			<li>
+				<a href="documents.html">
+					<svg role="img">
+						<use href="assets/img/svg-sprite/sprite.svg#document"></use>
+					</svg>
+					Документы
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div class="mobile-menu__btns">
+		<div class="mobile-menu__btn-wrap">
+			<a href="login.html" class="mobile-menu__btn btn btn-lg btn-black">Войти</a>
+		</div>
+		<div class="mobile-menu__btn-wrap">
+			<a href="index.html#join" class="mobile-menu__btn btn btn-lg btn-secondary">Регистрация</a>
+		</div>
+	</div>
+
+	<div class="mobile-menu__contacts contacts">
+		<div class="contacts__row row">
+			<div class="contacts__col col-6">
+				<a href="https://t.me/manager.loft" class="contacts__item item-contacts" target="_blank">
+					<img src="assets/img/icons/telegram-dark.svg" alt="alt" class="item-contacts__icon img-responsive">
+					<div class="item-contacts__content">
+						<div class="item-contacts__title">Telegram</div>
+						<div class="item-contacts__value title">@manager.loft</div>
+					</div>
+				</a>
+			</div>
+			<div class="contacts__col col-6">
+				<a href="https://www.instagram.com/loft.partners/" class="contacts__item item-contacts" target="_blank">
+					<img src="assets/img/svg-sprite/intermediate-svg/inst.svg" alt="alt" class="item-contacts__icon img-responsive">
+					<div class="item-contacts__content">
+						<div class="item-contacts__title">Instagram</div>
+						<div class="item-contacts__value title">@loft.partners</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+
+</div>

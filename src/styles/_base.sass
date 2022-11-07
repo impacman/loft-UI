@@ -1,0 +1,72 @@
+::selection
+	background-color: $accent
+	color: #fff
+
+html
+	scroll-behavior: smooth
+	height: -webkit-fill-available
+
+html, body
+	overflow-x: hidden
+
+body
+	font-family: ttfirs-loft, sans-serif
+	font-size: 18px
+	line-height: 1.29
+	color: $white
+	background-color: #181818
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+	min-height: -webkit-fill-available
+	position: relative
+	overflow: hidden
+	&::before, &::after
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		width: 100%
+		pointer-events: none
+	&::before
+		min-height: 4638px
+		background: linear-gradient(180deg, #181818 0%, #7A1316 37.5%, #7A1316 75%)
+		z-index: -1
+		overflow: hidden
+	&.body-home
+		&::before
+			min-height: auto
+			top: 2700px
+	&::after
+		background: rgba($black, .2)
+		opacity: 0
+		transition: opacity .5s ease
+	> *:not(.mobile-menu):not(.mm-modal):not(.panel-sidebar):not(.preloader)
+		transition: filter .5s ease
+	&.blur
+		&::after
+			opacity: 1
+		> *:not(.mobile-menu):not(.mm-modal):not(.panel-sidebar):not(.preloader)
+			filter: blur(10px)
+			pointer-events: none
+
+.img-responsive
+    display: block
+    max-width: 100%
+    height: auto
+
+.container
+	padding-left: 20px
+	padding-right: 20px
+
+.justify-content-center
+	justify-content: center
+
+.text-center
+	text-align: center
+
+.lock
+	overflow: hidden
+	height: 100%

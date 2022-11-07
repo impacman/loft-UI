@@ -1,0 +1,53 @@
+{{> header title="Loft"}}
+
+<div class="content-page">
+	<section class="section-auth">
+	
+		<div class="stage" style="background-image: url(assets/img/main/bg.png);">
+			<div class="container">
+	
+				<div class="stage__items">
+					<img src="assets/img/main/chip-1.png" alt="alt" class="stage__item rotating img-responsive">
+					<img src="assets/img/main/chip-2.png" alt="alt" class="stage__item rotating img-responsive">
+					<img src="assets/img/main/chip-3.png" alt="alt" class="stage__item rotating img-responsive">
+				</div>
+	
+			</div>
+		</div>
+	
+		<div class="container">
+	
+			<h1 class="page-title">Войти</h1>
+	
+			<form class="form-auth form" action="/client/partner/sign_in" name="formLogin">
+				<input type="hidden" value="Invalid email, password or authentication code." class="single-error">
+				<div class="form-auth__controls form__controls">
+					<div class="form-auth__row form__row row">
+						<div class="form-auth__col form__col col-12">
+							<div class="form-auth__group form__group">
+								<input type="text" class="form-auth__control form__control control" autocomplete="off" placeholder="Имя" name="company_name" data-required="shortStr" data-invalid-message="Пожалуйста введите корректное имя">
+							</div>
+						</div>
+						<div class="form-auth__col form__col col-12">
+							<div class="form-auth__group form__group">
+								<input type="password" class="form-auth__control form__control control" placeholder="Пароль" name="password" data-required="notEmpty" data-invalid-message="Пожалуйста введите пароль">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-auth__restore-password-wrap form__restore-password-wrap">
+					<a href="restore-password.html" class="form-auth__restore-password form__restore-password">Восстановить пароль</a>
+				</div>
+				<div class="form-auth__btns form__btns">
+					<button type="submit" class="form-auth__btn form__btn btn btn-lg btn-accent" disabled>Войти</button>
+				</div>
+				<div class="form-auth__links form__links">
+					<a href="index.html#join" class="form-auth__link form__link">У меня нет аккаунта</a>
+				</div>
+			</form>
+	
+		</div>
+	</section>
+</div>
+
+{{> footer }}

@@ -1,0 +1,1089 @@
+/*==========  Desktop First  ==========*/
+@media screen and (max-width: 1600px)
+	body
+		font-size: 16px
+		&.body-home
+			&::before
+				min-height: 3000px
+				top: 2500px
+
+	.btn
+		&-lg
+			padding: 17px 10px
+			width: 230px
+			font-size: 18px
+
+	.container
+		max-width: 1200px
+
+	.showcase
+		&__img
+			width: 700px
+
+	.ticker
+		height: 117px
+
+	.panel-sidebar
+		width: 65px
+		&:hover
+			width: 230px
+		&__list
+			a
+				font-size: 20px
+		svg
+			flex: 0 0 35px
+			width: 35px
+			max-height: 40px
+
+	.section-title
+		font-size: 70px
+		margin-bottom: 64px
+
+	.title
+		font-size: 22px
+
+	.page-title
+		font-size: 51px
+		margin-bottom: 40px
+
+	.card
+		&_lg
+			padding: 50px
+			.card
+				&__date
+					font-size: 26px
+					padding: 13px 27px
+		&_sm
+			.card
+				&__title, &__date
+					font-size: 22px
+
+	.content
+		font-size: 18px
+
+	.modal
+		&__close
+			top: 15px
+			right: 15px
+			left: auto
+			svg
+				stroke: $black
+
+	.header
+		padding: 20px 0 0
+		&__logo
+			img
+				max-width: 160px
+		&__btn
+			padding: 17px 30px
+			width: auto
+		&__lang
+			margin-right: 20px
+
+	.lang
+		flex: 0 0 130px
+		width: 130px
+		&__current, &__link
+			font-size: 18px
+		&__current
+			padding: 15px 18px
+			&::after
+				right: 18px
+		&__link
+			padding: 0 18px
+		&__flag-wrap
+			flex: 0 0 29px
+			width: 29px
+			height: 20px
+			margin-right: 13px
+		&__dropdown
+			margin-top: -1px
+			padding-bottom: 15px
+
+	.benefits
+		&__row
+			margin-bottom: -54px
+		&__col
+			margin-bottom: 54px
+
+	.faq
+		&__item
+			&:not(:last-child)
+				margin-bottom: 15px
+
+	.item-faq
+		&__header
+			padding: 20px 30px
+		&__body
+			padding: 0 30px 35px
+
+	.toggle
+		flex: 0 0 40px
+		width: 40px
+		height: 40px
+		&__icon
+			flex: 0 0 15px
+			width: 15px
+			height: 15px
+
+	.section-showcase
+		padding: 0 0 132px
+
+	.section-benefits, .section-terms, .section-faq, .section-news, .section-callback
+		margin: 132px 0
+	.section-contacts
+		margin: 132px 0 0
+
+	.item-term
+		padding: 30px 10px 45px
+		&__icon
+			max-width: 80px
+			margin: 0 auto 25px
+
+	.section-terms
+		.terms
+			margin-bottom: 63px
+		.countries
+			margin-bottom: 52px
+
+	.item-contacts
+		padding: 40px 20px
+		&__icon
+			max-width: 60px
+
+	.form
+		&__link
+			font-size: 22px
+
+	.form-join
+		&__controls
+			margin-bottom: 40px
+		&__checkboxes
+			margin-bottom: 40px
+
+	.stage
+		&__item
+			&:nth-child(1)
+				left: 33px
+			&:nth-child(2)
+				top: 250px
+				right: -26px
+			&:nth-child(3)
+				top: 618px
+
+	.checkbox
+		&__box
+			flex: 0 0 36px
+			width: 36px
+			height: 36px
+			&::before
+				flex: 0 0 18px
+				width: 18px
+				height: 18px
+
+@media screen and (max-width: 1200px)
+	// Общие стили и компоненты
+	.container
+		max-width: 960px
+
+	body
+		&.body-home
+			&::before
+				top: 2900px
+
+	.btn
+		&-lg
+			padding: 20px 30px
+			width: auto
+			font-size: 18px
+
+	.section-title
+		margin-bottom: 58px
+
+	.content
+		font-size: 16px
+		h2
+			font-size: 34px
+			margin-bottom: 30px
+		p, ul, ol
+			margin-bottom: 20px
+
+	.checkbox
+		&__box
+			flex: 0 0 32px
+			width: 32px
+			height: 32px
+			&::before
+				flex: 0 0 16px
+				width: 16px
+				height: 16px
+
+	.control, .select, .textarea
+		padding: 20px 30px
+
+	.select
+		&::after
+			right: 30px
+		.option
+			padding: 20px 30px
+
+	.form
+		&__row
+			margin-left: -15px
+			margin-right: -15px
+		&__col
+			padding: 0 15px
+		&__link
+			font-size: 20px
+
+	.stage
+		&__items
+			display: none
+
+	.lang
+		&__current
+			padding: 17px 21px
+
+	// Шапка
+	.mobile-menu
+		&__btn
+			width: 100%
+			font-size: 12px
+			padding: 18px 15px
+
+	// Футер
+	.footer
+		&__col
+			flex: 0 0 100%
+			max-width: none
+			width: 100%
+			&_copyright
+				order: 3
+			&_socials
+				order: 1
+				margin-bottom: 20px
+			&_links
+				order: 2
+				margin-bottom: 20px
+		&__copyright
+			text-align: center
+
+	.item-social
+		flex: 0 0 60px
+		width: 60px
+		height: 60px
+		&__icon
+			max-width: 28px
+			height: 28px
+
+	// Секции
+	.showcase
+		&__img-wrap
+			&::before
+				width: 1051px
+				height: 666px
+		&__text-wrap
+			font-size: 27.5px
+
+	.countries
+		&__col
+			flex: 0 0 15%
+			max-width: 15%
+
+	.section-auth, .section-restore-password
+		.stage
+			background-size: contain
+
+@media screen and (max-width: 992px)
+	// Общие стили и компоненты
+	.container
+		max-width: 720px
+
+	body
+		font-size: 15px
+
+	.btn
+		&-lg
+			font-size: 16px
+
+	.content
+		h2
+			font-size: 28px
+
+	.section-title
+		font-size: 60px
+		margin-bottom: 52px
+
+	.title
+		font-size: 19px
+
+	.page-title
+		font-size: 44px
+
+	.checkbox
+		&__box
+			flex: 0 0 28px
+			width: 28px
+			height: 28px
+			border-radius: 6px
+			&::before
+				background-image: url(../img/icons/check-bold.svg)
+				flex: 0 0 14px
+				width: 14px
+				height: 14px
+		&__text
+			margin-left: 12px
+
+	.control, .select, .textarea
+		padding: 20px 25px
+
+	.select
+		&::after
+			right: 25px
+		.option
+			padding: 20px 25px
+			font-size: 18px
+
+	.form
+		&__link, &__restore-password
+			font-size: 18px
+
+	.msg-form
+		padding: 20px 25px
+		&__icon
+			flex: 0 0 35px
+			width: 35px
+			height: 35px
+			margin-right: 15px
+		&__text
+			font-size: 18px
+
+	.card
+		&_lg
+			padding: 40px
+			.card
+				&__date
+					font-size: 22px
+					padding: 11px 24px
+		&_md
+			padding: 30px
+			.card
+				&__date
+					padding: 15px 30px 14px
+		&_sm
+			.card
+				&__title, &__date
+					font-size: 19px
+
+	.ticker
+		height: 104px
+		animation-duration: 20s
+
+	.panel-sidebar
+		display: none
+
+	.stage
+		background-position: center 100px
+
+	.preloader
+		&__img
+			max-width: 110px
+
+	// Шапка
+	.header
+		padding: 20px 0 0
+		&__logo
+			img
+				max-width: 150px
+		&__hamburger
+			display: block
+		&__btn
+			&_login
+				display: none
+
+	.lang
+		flex: 0 0 105px
+		width: 105px
+		&.active
+			.lang
+				&__current
+					border-radius: 10px 10px 0 0
+		&__flag-wrap
+			flex: 0 0 25px
+			width: 25px
+			height: 18px
+			margin-right: 10px
+			img
+				border-radius: 2px
+		&__current, &__link
+			font-size: 14px
+		&__current
+			padding: 13px 14px 12px
+			border-radius: 10px
+			&::after
+				width: 8px
+				height: 8px
+				right: 15px
+		&__link
+			padding: 0 14px
+		&__dropdown
+			border-radius: 0 0 10px 10px
+			margin-top: -1px
+			padding-top: 3px
+			padding-bottom: 13px
+
+	.mobile-menu
+		&__btn
+			font-size: 12px
+			padding: 18px 15px
+
+	// Футер
+	.footer
+		padding: 75px 0 100px
+
+	.socials
+		margin-left: -5.5px
+		margin-right: -5.5px
+		margin-bottom: -11px
+		&__item
+			margin: 0 5.5px 11px
+
+	// Секции
+	.section-showcase
+		padding: 77px 0 116px
+
+	.showcase
+		&__img-wrap
+			margin-bottom: 30px
+			&::before
+				width: 889px
+				height: 541px
+		&__text-wrap
+			font-size: 23px
+	
+	.item-benefit
+		&__img-wrap
+			height: 116px
+
+	.item-faq
+		&__header
+			padding: 20px 30px
+		&__body
+			padding: 0 30px 30px
+
+	.contacts
+		&__row
+			margin-left: -5px
+			margin-right: -5px
+			margin-bottom: -10px
+		&__col
+			padding: 0 5px
+			margin-bottom: 10px
+
+	.item-contacts
+		padding: 30px 20px
+		&__icon
+			max-width: 50px
+			margin: 0 auto 20px
+
+	.section-terms
+		.terms
+			margin-bottom: 56px
+		.countries
+			margin-bottom: 44px
+
+	.countries
+		&__col
+			flex: 0 0 20%
+			max-width: 20%
+
+	.item-country
+		&__img
+			max-width: 55px
+			margin: 0 auto 11px
+
+	.partners
+		&__col
+			flex: 0 0 25%
+			max-width: 25%
+
+	.item-partner
+		&__img
+			max-width: 100%
+
+	.item-document
+		padding: 25px 25px 16px
+		&__icon-wrap
+			margin-right: 25px
+
+	.modal
+		&__close
+			width: 30px
+			height: 30px
+
+	.modal-content
+		&__inner
+			padding: 60px
+
+	.section-benefits, .section-terms, .section-faq, .section-news, .section-callback
+		margin: 114px 0
+	.section-contacts
+		margin: 114px 0 0
+
+	.section-post-recommendations
+		margin: 100px 0 0
+
+@media screen and (max-width: 768px)
+	// Общие стили и компоненты
+	.container
+		max-width: 540px
+
+	body
+		font-size: 13px
+
+	.btn
+		&-lg
+			font-size: 14px
+			border-radius: 8px
+
+	.content
+		font-size: 14px
+		h2
+			font-size: 22px
+
+	.section-title
+		font-size: 50px
+		line-height: 1
+		margin-bottom: 46px
+
+	.title
+		font-size: 17px
+
+	.content-page
+		padding: 130px 0 25px
+
+	.page-title
+		font-size: 37px
+
+	.checkbox
+		&__box
+			flex: 0 0 25px
+			width: 25px
+			height: 25px
+			border-radius: 4px
+		&__text
+			margin-left: 12px
+
+	.control, .select, .textarea
+		padding: 18px 20px
+		border-radius: 10px
+
+	.select
+		&::after
+			right: 20px
+		.option
+			padding: 20px 20px
+
+	.form
+		&__row
+			margin-bottom: -10px
+		&__col
+			margin-bottom: 10px
+		&__link, &__restore-password
+			font-size: 16px
+		&__msg
+			margin-top: 10px
+
+	.msg-form
+		padding: 20px
+		border-radius: 10px
+		&__icon
+			flex: 0 0 30px
+			width: 30px
+			height: 30px
+		&__text
+			font-size: 14px
+
+	.card
+		&_lg
+			padding: 30px
+			.card
+				&__img-wrap
+					margin-bottom: 25px
+				&__date
+					font-size: 18px
+					padding: 9px 21px
+				&__title
+					margin-bottom: 20px
+		&_md
+			padding: 25px
+			.card
+				&__text-wrap
+					margin-bottom: 25px
+				&__date
+					padding: 10px 25px
+		&_sm
+			.card
+				&__title, &__date
+					font-size: 17px
+
+	.ticker
+		height: 90px
+
+	// Шапка
+	.header
+		&__logo
+			img
+				max-width: 130px
+		&__hamburger
+			.hamburger-box
+				width: 30px
+			.hamburger-inner
+				&, &::before, &::after
+					width: 30px
+
+	.mobile-menu
+		&__btn
+			font-size: 12px
+			padding: 18px 15px
+
+	// Футер
+	.footer
+		padding: 60px 0 80px
+
+	.item-social
+		flex: 0 0 49px
+		width: 49px
+		height: 49px
+		&__icon
+			max-width: 25px
+			height: 20px
+
+	// Секции
+	.section-showcase
+		padding: 77px 0 83px
+
+	.showcase
+		&__img-wrap
+			&::before
+				width: 727px
+				height: 416px
+		&__text-wrap
+			font-size: 18.5px
+
+	.benefits
+		&__row
+			margin-bottom: -48px
+		&__col
+			margin-bottom: 48px
+
+	.item-benefit
+		flex-direction: row
+		align-items: center
+		text-align: left
+		&__img-wrap
+			flex: 0 0 150px
+			width: 150px
+			display: block
+			height: auto
+			margin-bottom: 0
+			margin-right: 30px
+		&__img
+			max-height: 105px
+			margin: 0 auto
+		&__title
+			margin-bottom: 15px
+
+	.section-terms
+		.terms
+			margin-bottom: 50px
+		.countries
+			margin-bottom: 36px
+
+	.terms
+		&__row
+			margin-left: -5px
+			margin-right: -5px
+			margin-bottom: -10px
+		&__col
+			padding: 0 5px
+			margin-bottom: 10px
+
+	.item-term
+		border-radius: 10px
+		padding: 25px 10px 35px
+		&__icon
+			max-width: 50px
+			margin: 0 auto 20px
+
+	.toggle
+		flex: 0 0 30px
+		width: 30px
+		height: 30px
+		border-width: 1px
+		&__icon
+			flex: 0 0 12px
+			width: 12px
+			height: 12px
+			margin-right: -3px
+
+	.item-contacts
+		padding: 25px 10px
+		&__icon
+			max-width: 38px
+			max-height: 32px
+			margin: 0 auto 15px
+		&__title
+			margin-bottom: 5px
+
+	.item-country
+		&__img
+			max-width: 40px
+
+	.form-join
+		&__controls
+			margin-bottom: 30px
+		&__checkboxes
+			margin-bottom: 30px
+		&__links
+			margin-top: 30px
+
+	.form-auth
+		&__controls
+			margin-bottom: 30px
+		&__restore-password-wrap
+			margin-bottom: 30px
+		&__links
+			margin-top: 30px
+
+	.item-document
+		padding: 20px 20px 14px
+		&__icon-wrap
+			flex: 0 0 40px
+			width: 40px
+			margin-right: 20px
+
+	.modal-content
+		&__inner
+			padding: 50px 30px
+
+	.section-benefits, .section-terms, .section-faq, .section-news, .section-callback
+		margin: 100px 0
+	.section-contacts
+		margin: 100px 0 0
+
+@media screen and (max-width: 576px)
+	// Общие стили и компоненты
+	body
+		font-size: 12px
+		&.body-home
+			&::before
+				min-height: 2000px
+				top: 2000px
+
+	.btn
+		&-lg
+			padding: 18px 15px
+			font-size: 12px
+		&-sm
+			font-size: 12px
+			padding: 18px 15px
+
+	.content
+		font-size: 12px
+		h2
+			font-size: 16px
+			margin-bottom: 20px
+		p, ul, ol
+			margin-bottom: 15px
+
+	.content-page
+		padding: 110px 0 25px
+
+	.section-title
+		font-size: 40px
+		margin-bottom: 40px
+
+	.title
+		font-size: 14px
+
+	.page-title
+		font-size: 32px
+
+	.checkbox
+		&__box
+			flex: 0 0 20px
+			width: 20px
+			height: 20px
+			border-width: 1px
+			&::before
+				flex: 0 0 13px
+				width: 13px
+				height: 13px
+		&__text
+			margin-left: 9px
+
+	.control, .select, .textarea
+		padding: 14px 17px
+		border-width: 1px
+
+	.select
+		&::after
+			right: 17px
+			width: 8px
+			height: 8px
+		.nice-select-dropdown
+			border-radius: 10px
+		.option
+			padding: 10px 17px
+			font-size: 14px
+
+	.form
+		&__link, &__restore-password
+			font-size: 14px
+		&__msg
+			margin-bottom: 55px
+
+	.msg-form
+		padding: 15px 17px
+		&__icon
+			flex: 0 0 21px
+			width: 21px
+			height: 21px
+			margin-right: 9px
+		&__text
+			font-size: 12px
+
+	.card
+		&_sm
+			padding: 15px
+			.card
+				&__img-wrap
+					margin-bottom: 13px
+				&__date
+					font-size: 14px
+				&__title
+					font-size: 14px
+					margin-bottom: 13px
+				&__text-wrap
+					font-size: 12px
+					margin-bottom: 15px
+		&_lg
+			padding: 20px
+			.card
+				&__img-wrap
+					margin-bottom: 20px
+					border-radius: 15px
+				&__date
+					font-size: 16px
+					padding: 8px 20px 7px
+					border-radius: 0 15px 0 15px
+				&__title
+					font-size: 16px
+					margin-bottom: 15px
+		&_md
+			padding: 15px 15px 24px
+			.card
+				&__img-wrap
+					margin-bottom: 11px
+				&__title
+					margin-bottom: 10px
+				&__text-wrap
+					margin-bottom: 20px
+				&__date
+					padding: 8px 15px
+					border-radius: 0 10px 0 10px
+				&__btn
+					padding: 13px 15px
+
+	.ticker
+		height: 66px
+		animation-duration: 26s
+
+	.stage
+		background-position: center 77px
+
+	// Шапка
+	.header
+		padding: 17px 0 0
+		&__logo
+			img
+				max-width: 93px
+		&__hamburger
+			.hamburger-box
+				width: 22px
+				height: 20px
+			.hamburger-inner
+				&, &::before, &::after
+					width: 22px
+				&::before
+					top: 8px
+				&::after
+					top: 16px
+			&.is-active
+				.hamburger-inner
+					&::before
+						transform: translate3d(0, 6px, 0) rotate(45deg)
+					&::after
+						transform: translate3d(0, 6px, 0) rotate(-45deg)
+
+	// Футер
+	.footer
+		padding: 40px 0
+
+	// Секции
+	.section-showcase
+		padding: 77px 0 50px
+
+	.showcase
+		&__img-wrap
+			margin-bottom: 20px
+			&::before
+				width: 565px
+				height: 289px
+		&__img
+			width: 340px
+		&__text-wrap
+			font-size: 14px
+			margin-bottom: 40px
+
+	.benefits
+		&__row
+			margin-bottom: -30px
+		&__col
+			margin-bottom: 30px
+
+	.item-benefit
+		&__img-wrap
+			flex: 0 0 110px
+			width: 110px
+			margin-right: 18px
+		&__img
+			max-height: 78px
+		&__title
+			margin-bottom: 8px
+
+	.section-terms
+		.terms
+			margin-bottom: 37px
+		.countries
+			margin-bottom: 30px
+
+	.item-term
+		padding: 17px 10px 25px
+		&__icon
+			max-width: 37px
+			margin: 0 auto 15px
+
+	.toggle
+		flex: 0 0 20px
+		width: 20px
+		height: 20px
+		&__icon
+			flex: 0 0 8px
+			width: 8px
+			height: 8px
+			margin-right: -2px
+
+	.faq
+		&__item
+			&:not(:last-child)
+				margin-bottom: 8px
+
+	.item-faq
+		border-radius: 10px
+		&.active
+			.item-faq
+				&__header
+					padding-bottom: 8px
+		&__header
+			padding: 13px 8px 13px 18px
+		&__body
+			padding: 0 44px 13px 18px
+
+	.item-contacts
+		padding: 13px 10px
+		border-radius: 10px
+		&__icon
+			margin: 0 auto 10px
+		&__title
+			margin-bottom: 3px
+
+	.item-country
+		&__img
+			max-width: 33px
+
+	.partners
+		&__row
+			margin-left: -12px
+			margin-right: -12px
+			margin-bottom: -12px
+		&__col
+			padding: 0 12px
+			margin-bottom: 12px
+
+	.documents
+		&__item
+			&:not(:last-child)
+				margin-bottom: 11px
+
+	.item-document
+		border-radius: 10px
+		&__icon-wrap
+			flex: 0 0 35px
+			width: 35px
+
+	.modal
+		border-radius: 10px
+		&__close
+			width: 25px
+			height: 25px
+
+	.modal-auth
+		&__inner
+			padding: 50px 25px
+		&__title
+			margin-bottom: 30px
+
+	.modal-content
+		&__inner
+			padding: 50px 25px
+
+	.section-benefits, .section-terms, .section-faq, .section-news, .section-callback
+		margin: 60px 0
+	.section-contacts
+		margin: 60px 0 0
+
+	.section-post-recommendations
+		margin: 60px 0 0
+
+// ≥375px
+@media (max-width: 375px)
+	.mobile-menu
+		width: auto
+		right: 40px
+	
+/*==========  Mobile First  ==========*/
+@media screen and (min-width: 1200px)
+	// Общие стили и компоненты
+	// Шапка
+	// Футер
+	// Секции
+
+@media screen and (min-width: 992px)
+	// Общие стили и компоненты
+	// Шапка
+	// Футер
+	// Секции
+
+@media screen and (min-width: 768px)
+	// Общие стили и компоненты
+	// Шапка
+	// Футер
+	// Секции
+
+@media screen and (min-width: 576px)
+	// Общие стили и компоненты
+	// Шапка
+	// Футер
+	// Секции

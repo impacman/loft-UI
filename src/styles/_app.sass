@@ -1,0 +1,896 @@
+// Общие компоненты
+.btn
+	display: inline-block
+	vertical-align: top
+	border: none
+	cursor: pointer
+	text-align: center
+	font-family: montserrat-loft, sans-serif
+	font-weight: bold
+	line-height: 1.2
+	transition: background-color .3s ease, color .3s ease
+	&:hover
+		text-decoration: none
+	&:disabled
+		cursor: default
+	&-sm
+		width: 150px
+		font-size: 14px
+		border-radius: 10px
+		padding: 17px 30px
+	&-lg
+		width: 250px
+		padding: 20px 10px
+		font-size: 20px
+		border-radius: 15px
+	&-accent
+		background-color: $accent
+		color: $black
+		&:not(:disabled):hover
+			background-color: #ffc556
+			color: $black
+	&-secondary
+		background-color: $secondary
+		color: $white
+		&:not(:disabled):hover
+			background-color: #954245
+			color: $white
+	&-black
+		background-color: $black
+		color: $white
+		&:not(:disabled):hover
+			color: $white
+
+.section-title
+	font-size: 80px
+	font-weight: normal
+	text-transform: uppercase
+	line-height: 0.81
+	text-align: center
+	margin-bottom: 70px
+
+.title
+	font-size: 25px
+	font-weight: 500
+	line-height: 1
+
+.form
+	&_dark
+		.form
+			&__restore-password
+				color: $secondary
+				&:hover
+					color: $secondary
+			&__link
+				color: $black
+				&:hover
+					color: $black
+	&__controls
+	&__row
+		margin-bottom: -20px
+	&__col
+		margin-bottom: 20px
+	&__group
+		height: 100%
+	&__control
+		height: 100%
+	&__select
+		height: 100%
+	&__checkboxes
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+	&__checkbox
+	&__btns
+		text-align: center
+	&__btn
+		min-width: 140px
+	&__links
+		text-align: center
+	&__link
+		font-size: 24px
+		line-height: 1
+		text-decoration: underline
+		color: $white
+		&:hover
+			color: $white
+	&__restore-password-wrap
+		text-align: center
+	&__restore-password
+		font-size: 20px
+		line-height: 1
+		color: $accent
+		text-decoration: underline
+		background: none
+		padding: 0
+		border: none
+		&:hover
+			color: $accent
+	&__msg
+		margin-top: 20px
+
+.msg-form
+	display: flex
+	align-items: center
+	background: rgba($white, 0.75)
+	border-radius: 20px
+	padding: 20px 30px
+	&_danger
+		color: $danger
+	&_success
+		color: $success
+	&__icon
+		flex: 0 0 42px
+		width: 42px
+		margin-right: 19px
+	&__text
+		font-size: 20px
+		font-weight: 500
+
+.control, .textarea, .select
+	@extend .title
+	display: block
+	background: none
+	width: 100%
+	color: $white
+	border: 2px solid $white
+	border-radius: 20px
+	padding: 20px 35px
+	outline: none
+	transition: border-color .3s ease, border-width .3s ease, color .3s ease, background .3s ease
+	&::placeholder
+		color: $white
+		opacity: 1
+	&::-webkit-input-placeholder
+		color: $white
+		opacity: 1
+	&::-moz-placeholder
+		color: $white
+		opacity: 1
+	&:-moz-placeholder
+		color: $white
+		opacity: 1
+	&:-ms-input-placeholder
+		color: $white
+		opacity: 1
+	&.is-invalid
+		border-width: 4px
+		border-color: $danger
+		color: $danger
+		&::placeholder
+			color: $danger
+	&.is-valid
+		background: rgba($white, .2)
+	&_dark
+		border-color: $black
+		color: $black
+		&::placeholder
+			color: $black
+
+.control
+
+.select
+	display: flex
+	align-items: center
+	&::after
+		right: 44px
+	.nice-select-dropdown
+		border-radius: 20px
+		overflow: hidden
+	.option
+		background-color: $white
+		color: $black
+		padding: 20px 35px
+		transition: background-color .3s ease
+		font-size: 24px
+		&:hover
+			background-color: #e6e6e6
+
+.textarea
+
+.checkbox
+	position: relative
+	display: flex
+	align-items: center
+	cursor: pointer
+	margin-bottom: 0
+	&__input
+		position: absolute
+		top: 0
+		left: 0
+		width: 0
+		height: 0
+		opacity: 0
+		&:checked ~ .checkbox__box::before
+			opacity: 1
+			transform: scale(1)
+	&__box
+		display: flex
+		justify-content: center
+		align-items: center
+		flex: 0 0 40px
+		width: 40px
+		height: 40px
+		border: 2px solid $white
+		border-radius: 10px
+		position: relative
+		&::before
+			content: ''
+			display: block
+			flex: 0 0 20px
+			width: 20px
+			height: 20px
+			background: url(../img/icons/check.svg) center / contain no-repeat
+			opacity: 0
+			transform: scale(0)
+			transition: opacity .3s ease, transform .3s ease
+	&__text
+		margin-left: 17px
+
+.panel-sidebar
+	border-radius: 0 20px 20px 0
+	overflow: hidden
+	position: fixed
+	top: 50%
+	left: 0
+	transform: translateY(-50%)
+	width: 73px
+	transition: width .3s ease
+	z-index: 10
+	&:hover
+		width: 286px
+	&__nav
+	&__list
+		list-style-type: none
+		margin: 0
+		padding: 0
+		li
+			&:hover, &.current-menu-item
+				a
+					background-color: $secondary
+					color: $white
+					svg
+						fill: $white
+		a
+			display: flex
+			width: 100%
+			background-color: $accent
+			align-items: center
+			font-size: 24px
+			font-weight: 500
+			color: $dark
+			text-decoration: none
+			transition: background-color .3s ease, color .3s ease
+			padding: 15px
+			white-space: nowrap
+	svg
+		fill: $dark
+		flex: 0 0 40px
+		max-width: 40px
+		max-height: 43px
+		margin-right: 18px
+		transition: fill .3s ease
+
+.slider
+	&__items
+	&__slide
+
+.content-page
+	padding: 150px 0 25px
+
+.page-title
+	font-size: 58px
+	font-weight: 500
+	line-height: 1
+	text-align: center
+	margin-bottom: 55px
+
+.cards
+	&__row
+		margin-left: -10px
+		margin-right: -10px
+		margin-bottom: -20px
+	&__col
+		padding: 0 10px
+		margin-bottom: 20px
+	&__item
+
+.card
+	display: block
+	box-shadow: 0px 10px 30px rgba($black, .3)
+	background-color: #fff
+	border-radius: 20px
+	color: $dark
+	&:hover
+		color: $dark
+		text-decoration: none
+	&_sm
+		padding: 20px
+		.card
+			&__img-wrap
+				border-radius: 10px
+				margin-bottom: 16px
+			&__img
+			&__date
+				font-size: 24px
+				padding: 5px 14px 3px
+				border-radius: 0 10px 0 10px
+			&__title
+				font-size: 24px
+				margin-bottom: 15px
+			&__text-wrap
+				font-size: 14px
+				margin-bottom: 22px
+	&_md
+		padding: 40px 40px 22px
+		.card
+			&__img-wrap
+				margin-bottom: 20px
+			&__img
+			&__date
+				padding: 15px 50px 14px
+			&__title
+				margin-bottom: 15px
+			&__text-wrap
+				margin-bottom: 30px
+	&_lg
+		padding: 56px 63px 46px
+		.card
+			&__img-wrap
+				margin-bottom: 30px
+			&__img
+			&__date
+				font-size: 30px
+				padding: 15px 30px
+			&__title
+				text-align: center
+				margin-bottom: 25px
+			&__text-wrap
+	&__img-wrap
+		display: flex
+		border-radius: 20px
+		overflow: hidden
+		position: relative
+		padding-bottom: calc(100% / (870 / 300))
+	&__img
+		object-fit: cover
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+	&__date
+		display: inline-block
+		background-color: $secondary
+		border-radius: 0 20px 0 20px
+		color: $white
+		position: absolute
+		bottom: 0
+		left: 0
+		&_static
+			position: static
+			margin-bottom: 15px
+	&__title
+	&__text-wrap
+		p, ul, ol
+			&:last-child
+				margin-bottom: 0
+	&__btn-wrap
+		text-align: center
+	&__btn
+
+.content-card
+
+.content
+	font-size: 20px
+	h1, h2, h3, h4, h5, h6
+		font-weight: 500
+	h2
+		font-size: 40px
+		margin-bottom: 40px
+	p, ul, ol
+		margin-bottom: 30px
+		&:last-child
+			margin-bottom: 0
+
+.stage
+	background-image: url(../img/main/bg.png)
+	background-size: contain
+	background-repeat: no-repeat
+	background-position: top center
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	pointer-events: none
+	z-index: -1
+	&__items
+		position: relative
+	&__item
+		max-width: 165px
+		position: absolute
+		&:nth-child(1)
+			top: 295px
+			left: -20px
+		&:nth-child(2)
+			top: 250px
+			right: -62px
+		&:nth-child(3)
+			top: 663px
+			right: 0
+
+@keyframes rotating
+	from
+		transform: rotate(0deg)
+	to
+		transform: rotate(360deg)
+
+.rotating
+	animation: rotating 60s linear infinite
+	
+.ticker
+	height: 130px
+	width: 9999px
+	background: url(../img/main/ticker.svg) center / contain repeat-x
+	margin: 0 auto
+	animation-duration: 17s
+	animation-timing-function: linear
+	animation-iteration-count: infinite
+	&.active
+		animation-name: ticker
+
+@keyframes ticker
+	0%
+		transform: translate3d(0, 0, 0)
+	100%
+		transform: translate3d(-2014px, 0, 0)
+
+.preloader
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: #191819
+	overflow: hidden
+	z-index: 99
+	display: flex
+	justify-content: center
+	align-items: center
+	transition: opacity .6s ease, visibility .6s ease
+	opacity: 1
+	visibility: visible
+	&__img
+		max-width: 130px
+		transition: opacity .1s ease
+		display: none
+		&.active
+			display: block
+	&.hide
+		opacity: 0
+		visibility: hidden
+		.preloader__img
+			opacity: 0
+
+// Секции
+// Секция Первый экран
+.section-showcase
+	position: relative
+	padding: 0 0 150px
+
+.showcase
+	text-align: center
+	&__img-wrap
+		position: relative
+		margin-bottom: 45px
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			top: 55%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 1213px
+			height: 791px
+			background: url(../img/main/light.png) center / contain no-repeat
+			pointer-events: none
+	&__img
+		width: 930px
+		margin: 0 auto
+	&__title
+		margin-bottom: 10px
+	&__text-wrap
+		font-size: 29px
+		font-weight: 500
+		margin-bottom: 40px
+	&__btn-wrap
+	&__btn
+
+// Секция Преимущества
+.section-benefits
+	margin: 150px 0
+
+.benefits
+	&__row
+		margin-left: -20px
+		margin-right: -20px
+		margin-bottom: -60px
+	&__col
+		padding: 0 20px
+		margin-bottom: 60px
+	&__item
+		height: 100%
+
+.item-benefit
+	display: flex
+	flex-direction: column
+	text-align: center
+	&__img-wrap
+		display: flex
+		align-items: flex-end
+		justify-content: center
+		height: 120px
+		margin-bottom: 34px
+	&__img
+		max-height: 100%
+	&__content
+	&__title
+		margin-bottom: 20px
+	&__text
+
+// Секция Условия
+.section-terms
+	margin: 150px 0
+	.terms
+		margin-bottom: 70px
+	.countries
+		margin-bottom: 60px
+
+.terms
+	&__row
+		justify-content: center
+		margin-left: -10px
+		margin-right: -10px
+		margin-bottom: -20px
+	&__col
+		padding: 0 10px
+		margin-bottom: 20px
+	&__item
+		height: 100%
+
+.item-term
+	display: flex
+	flex-direction: column
+	background: linear-gradient(106.74deg, rgba($white, 0.1) 0%, rgba(40, 40, 40, 0.1) 100%)
+	border-radius: 20px
+	text-align: center
+	padding: 43px 10px 55px
+	&__icon
+		align-self: flex-start
+		max-width: 90px
+		margin: 0 auto 33px
+	&__title
+		margin-top: auto
+
+.countries
+	&__row
+		justify-content: center
+		margin-left: -5px
+		margin-right: -5px
+		margin-bottom: -11px
+	&__col
+		padding: 0 5px
+		flex: 0 0 10%
+		max-width: 10%
+		margin-bottom: 11px
+	&__item
+
+.item-country
+	text-align: center
+	&__img
+		margin: 0 auto 20px
+	&__title
+
+.partners
+	&__row
+		justify-content: center
+		align-items: center
+		margin-left: -21px
+		margin-right: -21px
+		margin-bottom: -20px
+	&__col
+		padding: 0 21px
+		margin-bottom: 20px
+	&__item
+
+.item-partner
+	&__img
+		max-width: 143px
+		margin: 0 auto
+
+// Секция Вопрос-Ответ
+.section-faq
+	margin: 150px 0
+
+.faq
+	&__items
+	&__item
+		&:not(:last-child)
+			margin-bottom: 20px
+
+.item-faq
+	background-color: #272727
+	border-radius: 20px
+	transition: background-color .3s ease
+	&.active
+		background-color: $secondary
+		.item-faq
+			&__toggle
+				transform: rotate(90deg)
+			&__header
+				padding-bottom: 13px
+	&__header
+		display: flex
+		align-items: center
+		width: 100%
+		cursor: pointer
+		color: $accent
+		padding: 25px 35px
+		transition: padding .3s ease
+	&__title
+		flex: 1 1 auto
+		color: $accent
+		margin-right: 10px
+	&__toggle
+		transition: transform .3s ease
+		margin-left: auto
+	&__body
+		padding: 0 35px 40px
+		display: none
+		p:last-child
+			margin-bottom: 0
+
+.toggle
+	display: flex
+	justify-content: center
+	align-items: center
+	flex: 0 0 51px
+	width: 51px
+	height: 51px
+	border: 2px solid $accent
+	border-radius: 50%
+	&__icon
+		flex: 0 0 20px
+		width: 20px
+		height: 20px
+		margin-right: -4px
+
+// Секция Новости
+.section-news
+	margin: 150px 0
+
+.slider-news
+	overflow: visible
+	&__items
+	&__slide
+		&:not(.swiper-slide-active)
+			.card
+				pointer-events: none
+
+// Секция Обратная связь
+.section-callback
+	margin: 150px 0
+
+.form-join
+	&__controls
+		margin-bottom: 50px
+	&__row
+	&__col
+	&__group
+	&__control
+	&__select
+	&__checkboxes
+		margin-bottom: 50px
+	&__checkbox
+	&__btns
+	&__btn
+	&__links
+		margin-top: 36px
+	&__link
+
+// Секция контакты
+.section-contacts
+	margin: 150px 0 0
+
+.contacts
+	&__row
+		justify-content: center
+		margin-left: -10px
+		margin-right: -10px
+		margin-bottom: -20px
+	&__col
+		padding: 0 10px
+		margin-bottom: 20px
+	&__item
+		height: 100%
+
+.item-contacts
+	display: flex
+	flex-direction: column
+	color: $white
+	background: rgba($white, .2)
+	border-radius: 20px
+	padding: 48px 20px 44px
+	text-align: center
+	transition: background .3s ease
+	&:hover
+		color: $white
+		text-decoration: none
+		background: rgba($white, .3)
+	&__icon
+		align-self: flex-start
+		max-width: 80px
+		margin: 0 auto 28px
+	&__content
+		margin-top: auto
+	&__title
+		font-weight: 500
+		line-height: 1.6
+		margin-bottom: 10px
+	&__value
+
+// Секция Посты
+
+// Секция Пост
+
+// Секция Другие посты
+.section-post-recommendations
+	margin: 120px 0 0
+
+// Секция Документы
+
+.documents
+	&__item
+		&:not(:last-child)
+			margin-bottom: 17px
+
+.item-document
+	border: none
+	width: 100%
+	display: flex
+	align-items: center
+	background-color: #272727
+	border-radius: 20px
+	color: $white
+	text-align: left
+	padding: 25px 30px 18px
+	transition: background-color .3s ease
+	&:hover
+		color: $white
+		text-decoration: none
+		background-color: #484848
+	&__icon-wrap
+		display: block
+		flex: 0 0 50px
+		width: 50px
+		margin-right: 29px
+	&__icon
+		margin: 0 auto
+
+// Секция Авторизация (Вход)
+.section-auth
+	.stage
+		background-size: cover
+
+.form-auth
+	max-width: 465px
+	margin: 0 auto
+	&__controls
+		margin-bottom: 40px
+	&__row
+	&__col
+	&__group
+	&__control
+	&__restore-password-wrap
+		margin-bottom: 40px
+	&__restore-password
+	&__btns
+	&__btn
+	&__links
+		margin-top: 40px
+	&__link
+
+// Секция Смена пароля
+.section-restore-password
+	.stage
+		background-size: cover
+
+// Модалки
+.mm-modal
+	&__overlay
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: rgba(#181818, .8)
+		z-index: 20
+	&__wrapper
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 100%
+	&__inner
+		flex: 1 1 auto
+
+.modal
+	position: relative
+	&__inner
+		max-height: 95vh
+		overflow-y: auto
+		background-color: #fff
+		border-radius: 20px
+		position: relative
+		color: $dark
+	&__close
+		background: none
+		padding: 0
+		border: none
+		width: 39px
+		height: 39px
+		position: absolute
+		top: 0
+		left: calc(100% + 20px)
+		z-index: 2
+		svg
+			width: 100%
+			height: 100%
+			stroke: $white
+			stroke-width: 2px
+			fill: none
+
+.modal-content
+	max-width: 1435px
+	&__inner
+		padding: 60px 80px
+
+.modal-auth
+	max-width: 733px
+	&__inner
+		padding: 65px 30px 54px
+	&__title
+		margin-bottom: 40px
+
+@keyframes mmfadeIn
+	0%
+		opacity: 0
+	100%
+		opacity: 1
+@keyframes mmfadeOut
+	0%
+		opacity: 1
+	100%
+		opacity: 0
+@keyframes mmslideIn
+	0%
+		transform: translateY(15%)
+	100%
+		transform: translateY(0)
+@keyframes mmslideOut
+	0%
+		transform: translateY(0)
+	100%
+		transform: translateY(-10%)
+.micromodal-slide
+	display: none
+.micromodal-slide.is-open
+	display: block
+.micromodal-slide[aria-hidden="false"] .mm-modal__overlay
+	animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1)
+.micromodal-slide[aria-hidden="false"] .mm-modal__inner
+	animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1)
+.micromodal-slide[aria-hidden="true"] .mm-modal__overlay
+	animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1)
+.micromodal-slide[aria-hidden="true"] .mm-modal__inner
+	animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1)
