@@ -1,9 +1,10 @@
 .footer
-	padding: 75px 0 128px
+	padding: 80px 0
 	color: $white
 	margin-top: auto
 	&__container
 	&__row
+		justify-content: space-between
 		align-items: center
 	&__col
 		padding: 0 15px
@@ -17,7 +18,8 @@
 			flex: 0 0 24%
 			max-width: 24%
 	&__copyright
-		@extend .title
+		// @extend .title
+		font-size: 16px
 		font-weight: normal
 		margin-bottom: 0
 	&__socials
@@ -25,13 +27,13 @@
 		list-style-type: none
 		display: flex
 		flex-wrap: wrap
-		justify-content: center
+		justify-content: flex-end
 		margin: 0 -5px 0
 		padding: 0
 		li
 			margin: 0 5px
 		a
-			@extend .title
+			font-size: 16px
 			font-weight: normal
 			color: $black
 			text-decoration: underline
@@ -42,19 +44,16 @@
 	display: flex
 	justify-content: center
 	flex-wrap: wrap
-	margin-left: -8.5px
-	margin-right: -8.5px
-	margin-bottom: -17px
 	&__item
-		margin: 0 8.5px 17px
+		margin: 0 12px
 
 .item-social
 	display: flex
 	justify-content: center
 	align-items: center
-	flex: 0 0 70px
-	width: 70px
-	height: 70px
+	flex: 0 0 60px
+	width: 60px
+	height: 60px
 	border: 2px solid $white
 	border-radius: 50%
 	&__icon

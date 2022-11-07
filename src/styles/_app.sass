@@ -7,22 +7,20 @@
 	text-align: center
 	font-family: montserrat-loft, sans-serif
 	font-weight: bold
-	line-height: 1.2
+	line-height: 1.3
 	transition: background-color .3s ease, color .3s ease
 	&:hover
 		text-decoration: none
 	&:disabled
 		cursor: default
 	&-sm
-		width: 150px
 		font-size: 14px
 		border-radius: 10px
 		padding: 17px 30px
 	&-lg
-		width: 250px
-		padding: 20px 10px
+		padding: 14px 16px
 		font-size: 20px
-		border-radius: 15px
+		border-radius: 12px
 	&-accent
 		background-color: $accent
 		color: $black
@@ -42,17 +40,17 @@
 			color: $white
 
 .section-title
-	font-size: 80px
+	font-size: 48px
 	font-weight: normal
 	text-transform: uppercase
-	line-height: 0.81
+	line-height: 1.4
 	text-align: center
-	margin-bottom: 70px
+	margin-bottom: 80px
 
 .title
-	font-size: 25px
+	font-size: 28px
 	font-weight: 500
-	line-height: 1
+	line-height: 1.25
 
 .form
 	&_dark
@@ -67,9 +65,9 @@
 					color: $black
 	&__controls
 	&__row
-		margin-bottom: -20px
 	&__col
-		margin-bottom: 20px
+		margin-bottom: 24px
+		padding: 0 20px
 	&__group
 		height: 100%
 	&__control
@@ -78,8 +76,9 @@
 		height: 100%
 	&__checkboxes
 		display: flex
-		justify-content: center
+		align-items: center
 		flex-wrap: wrap
+		padding-left: 5px
 	&__checkbox
 	&__btns
 		text-align: center
@@ -88,8 +87,8 @@
 	&__links
 		text-align: center
 	&__link
-		font-size: 24px
-		line-height: 1
+		font-size: 20px
+		line-height: 1.2
 		text-decoration: underline
 		color: $white
 		&:hover
@@ -134,8 +133,9 @@
 	width: 100%
 	color: $white
 	border: 2px solid $white
-	border-radius: 20px
-	padding: 20px 35px
+	border-radius: 12px
+	padding: 10px 24px
+	font-size: 20px
 	outline: none
 	transition: border-color .3s ease, border-width .3s ease, color .3s ease, background .3s ease
 	&::placeholder
@@ -208,24 +208,25 @@
 		display: flex
 		justify-content: center
 		align-items: center
-		flex: 0 0 40px
-		width: 40px
-		height: 40px
+		flex: 0 0 32px
+		width: 32px
+		height: 32px
 		border: 2px solid $white
-		border-radius: 10px
+		border-radius: 8px
 		position: relative
 		&::before
 			content: ''
 			display: block
-			flex: 0 0 20px
-			width: 20px
-			height: 20px
+			flex: 0 0 18px
+			width: 18px
+			height: 18px
 			background: url(../img/icons/check.svg) center / contain no-repeat
 			opacity: 0
 			transform: scale(0)
 			transition: opacity .3s ease, transform .3s ease
 	&__text
-		margin-left: 17px
+		margin-left: 24px
+		font-size: 20px
 
 .panel-sidebar
 	border-radius: 0 20px 20px 0
@@ -234,11 +235,11 @@
 	top: 50%
 	left: 0
 	transform: translateY(-50%)
-	width: 73px
+	width: 82px
 	transition: width .3s ease
 	z-index: 10
 	&:hover
-		width: 286px
+		width: 260px
 	&__nav
 	&__list
 		list-style-type: none
@@ -253,22 +254,23 @@
 						fill: $white
 		a
 			display: flex
-			width: 100%
-			background-color: $accent
 			align-items: center
-			font-size: 24px
+			width: 100%
+			height: 56px
+			background-color: $accent
+			font-size: 20px
 			font-weight: 500
 			color: $dark
 			text-decoration: none
 			transition: background-color .3s ease, color .3s ease
-			padding: 15px
+			padding: 12px 25px
 			white-space: nowrap
 	svg
 		fill: $dark
-		flex: 0 0 40px
-		max-width: 40px
-		max-height: 43px
-		margin-right: 18px
+		flex: 0 0 32px
+		max-width: 32px
+		max-height: 32px
+		margin-right: 25px
 		transition: fill .3s ease
 
 .slider
@@ -279,9 +281,9 @@
 	padding: 150px 0 25px
 
 .page-title
-	font-size: 58px
+	font-size: 40px
 	font-weight: 500
-	line-height: 1
+	line-height: 1.5
 	text-align: center
 	margin-bottom: 55px
 
@@ -299,59 +301,19 @@
 	display: block
 	box-shadow: 0px 10px 30px rgba($black, .3)
 	background-color: #fff
-	border-radius: 20px
+	border-radius: 12px
 	color: $dark
+	padding: 16px
 	&:hover
 		color: $dark
 		text-decoration: none
-	&_sm
-		padding: 20px
-		.card
-			&__img-wrap
-				border-radius: 10px
-				margin-bottom: 16px
-			&__img
-			&__date
-				font-size: 24px
-				padding: 5px 14px 3px
-				border-radius: 0 10px 0 10px
-			&__title
-				font-size: 24px
-				margin-bottom: 15px
-			&__text-wrap
-				font-size: 14px
-				margin-bottom: 22px
-	&_md
-		padding: 40px 40px 22px
-		.card
-			&__img-wrap
-				margin-bottom: 20px
-			&__img
-			&__date
-				padding: 15px 50px 14px
-			&__title
-				margin-bottom: 15px
-			&__text-wrap
-				margin-bottom: 30px
-	&_lg
-		padding: 56px 63px 46px
-		.card
-			&__img-wrap
-				margin-bottom: 30px
-			&__img
-			&__date
-				font-size: 30px
-				padding: 15px 30px
-			&__title
-				text-align: center
-				margin-bottom: 25px
-			&__text-wrap
 	&__img-wrap
 		display: flex
-		border-radius: 20px
+		border-radius: 10px
 		overflow: hidden
 		position: relative
 		padding-bottom: calc(100% / (870 / 300))
+		margin-bottom: 24px
 	&__img
 		object-fit: cover
 		width: 100%
@@ -362,19 +324,26 @@
 	&__date
 		display: inline-block
 		background-color: $secondary
-		border-radius: 0 20px 0 20px
+		border-radius: 0 12px 0 0
 		color: $white
 		position: absolute
 		bottom: 0
 		left: 0
+		padding: 8px 4px
+		width: 120px
+		text-align: center
+		&.title 
+			font-size: 16px
 		&_static
 			position: static
 			margin-bottom: 15px
 	&__title
+		margin-bottom: 16px
+		&.title
+			font-size: 20px
 	&__text-wrap
-		p, ul, ol
-			&:last-child
-				margin-bottom: 0
+		margin-bottom: 24px
+		font-size: 18px
 	&__btn-wrap
 		text-align: center
 	&__btn
@@ -430,7 +399,7 @@
 	animation: rotating 60s linear infinite
 	
 .ticker
-	height: 130px
+	height: 148px
 	width: 9999px
 	background: url(../img/main/ticker.svg) center / contain repeat-x
 	margin: 0 auto
@@ -475,15 +444,20 @@
 
 // Секции
 // Секция Первый экран
+.home
+	display: flex
+	flex-direction: column
+
 .section-showcase
 	position: relative
-	padding: 0 0 150px
+	padding: 0 0 110px
 
 .showcase
 	text-align: center
+	padding-top: 100px
 	&__img-wrap
 		position: relative
-		margin-bottom: 45px
+		margin-bottom: 106px
 		&::before
 			content: ''
 			display: block
@@ -496,20 +470,21 @@
 			background: url(../img/main/light.png) center / contain no-repeat
 			pointer-events: none
 	&__img
-		width: 930px
+		width: 805px
 		margin: 0 auto
 	&__title
-		margin-bottom: 10px
+		margin-bottom: 12px
 	&__text-wrap
-		font-size: 29px
+		font-size: 20px
+		line-height: 1.8
 		font-weight: 500
-		margin-bottom: 40px
+		margin-bottom: 32px
 	&__btn-wrap
 	&__btn
 
 // Секция Преимущества
 .section-benefits
-	margin: 150px 0
+	margin: 115px 0 40px
 
 .benefits
 	&__row
@@ -531,21 +506,22 @@
 		align-items: flex-end
 		justify-content: center
 		height: 120px
-		margin-bottom: 34px
+		margin-bottom: 24px
 	&__img
 		max-height: 100%
 	&__content
 	&__title
-		margin-bottom: 20px
+		margin-bottom: 16px
 	&__text
+		font-size: 20px
 
 // Секция Условия
 .section-terms
-	margin: 150px 0
+	margin: 40px 0 45px
 	.terms
-		margin-bottom: 70px
+		margin-bottom: 80px
 	.countries
-		margin-bottom: 60px
+		margin-bottom: 50px
 
 .terms
 	&__row
@@ -554,7 +530,7 @@
 		margin-right: -10px
 		margin-bottom: -20px
 	&__col
-		padding: 0 10px
+		padding: 0 12px
 		margin-bottom: 20px
 	&__item
 		height: 100%
@@ -565,11 +541,12 @@
 	background: linear-gradient(106.74deg, rgba($white, 0.1) 0%, rgba(40, 40, 40, 0.1) 100%)
 	border-radius: 20px
 	text-align: center
-	padding: 43px 10px 55px
+	padding: 48px 10px 34px
 	&__icon
 		align-self: flex-start
-		max-width: 90px
-		margin: 0 auto 33px
+		width: auto
+		max-height: 72px
+		margin: 0 auto 30px
 	&__title
 		margin-top: auto
 
@@ -611,7 +588,9 @@
 
 // Секция Вопрос-Ответ
 .section-faq
-	margin: 150px 0
+	margin: 40px 0 40px
+	.section-title
+		margin-bottom: 40px
 
 .faq
 	&__items
@@ -636,17 +615,18 @@
 		width: 100%
 		cursor: pointer
 		color: $accent
-		padding: 25px 35px
+		padding: 12px 24px
 		transition: padding .3s ease
 	&__title
 		flex: 1 1 auto
 		color: $accent
 		margin-right: 10px
+		font-size: 20px
 	&__toggle
 		transition: transform .3s ease
 		margin-left: auto
 	&__body
-		padding: 0 35px 40px
+		padding: 16px 24px 12px
 		display: none
 		p:last-child
 			margin-bottom: 0
@@ -655,20 +635,22 @@
 	display: flex
 	justify-content: center
 	align-items: center
-	flex: 0 0 51px
-	width: 51px
-	height: 51px
+	flex: 0 0 36px
+	width: 36px
+	height: 36px
 	border: 2px solid $accent
 	border-radius: 50%
 	&__icon
-		flex: 0 0 20px
-		width: 20px
-		height: 20px
-		margin-right: -4px
+		flex: 0 0 15px
+		width: 15px
+		height: 15px
+		margin-right: -2px
 
 // Секция Новости
 .section-news
-	margin: 150px 0
+	margin: 40px 0 40px
+	.section-title
+		margin-bottom: 64px
 
 .slider-news
 	overflow: visible
@@ -680,18 +662,20 @@
 
 // Секция Обратная связь
 .section-callback
-	margin: 150px 0
+	margin: 40px 0 40px
+	.section-title
+		margin-bottom: 50px
 
 .form-join
 	&__controls
-		margin-bottom: 50px
+		// margin-bottom: 50px
 	&__row
 	&__col
 	&__group
 	&__control
 	&__select
 	&__checkboxes
-		margin-bottom: 50px
+		margin-bottom: 40px
 	&__checkbox
 	&__btns
 	&__btn
@@ -701,7 +685,9 @@
 
 // Секция контакты
 .section-contacts
-	margin: 150px 0 0
+	margin: 40px 0 0
+	.section-title
+		margin-bottom: 40px
 
 .contacts
 	&__row
@@ -710,7 +696,7 @@
 		margin-right: -10px
 		margin-bottom: -20px
 	&__col
-		padding: 0 10px
+		padding: 0 12px
 		margin-bottom: 20px
 	&__item
 		height: 100%
@@ -721,7 +707,7 @@
 	color: $white
 	background: rgba($white, .2)
 	border-radius: 20px
-	padding: 48px 20px 44px
+	padding: 27px 20px 14px
 	text-align: center
 	transition: background .3s ease
 	&:hover
@@ -730,14 +716,16 @@
 		background: rgba($white, .3)
 	&__icon
 		align-self: flex-start
-		max-width: 80px
-		margin: 0 auto 28px
+		width: auto
+		max-height: 48px
+		margin: 0 auto 30px
 	&__content
 		margin-top: auto
 	&__title
 		font-weight: 500
 		line-height: 1.6
-		margin-bottom: 10px
+		margin-bottom: 16px
+		font-size: 16px
 	&__value
 
 // Секция Посты

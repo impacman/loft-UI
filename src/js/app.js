@@ -65,8 +65,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		slideToClickedSlide: true,
 		coverflowEffect: {
 			rotate: 0,
-			stretch: 200,
-			depth: 200,
+			stretch: 150,
+			depth: 150,
 			modifier: 1,
 			slideShadows: false,
 		},
@@ -74,8 +74,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			768: {
 				coverflowEffect: {
 					rotate: 0,
-					stretch: 450,
-					depth: 200,
+					stretch: 310,
+					depth: 150,
 					modifier: 1,
 					slideShadows: false,
 				},
