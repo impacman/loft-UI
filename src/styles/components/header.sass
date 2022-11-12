@@ -4,7 +4,7 @@
 	left: 0
 	width: 100%
 	z-index: 10
-	padding: 20px 0 0
+	padding: 20px 0
 	&::before
 		content: ''
 		display: block
@@ -30,23 +30,19 @@
 		img
 			max-width: 139px
 	&__lang
-		margin-right: 30px
+		margin-right: 16px
 	&__btns
 		display: flex
-		flex-wrap: wrap
-		margin-left: -5.5px
-		margin-right: -5.5px
 	&__btn
 		width: auto
-		padding: 20px 30px
+		padding: 14px 16px
 		box-shadow: 0px 4px 8px 1px rgba($black, 0.3)
-		margin: 0 5.5px
+		&:not(:last-of-type)
+			margin-right: 16px
 		&_login
 		&_register
 	&__hamburger
 		display: none
-		margin-right: 2px
-		margin-left: -9px
 		.hamburger-inner
 			&, &::after, &::before
 				background-color: $white
@@ -78,12 +74,12 @@
 	&__current, &__link
 		display: flex
 		align-items: center
-		font-size: 20px
+		font-size: 19px
 		font-weight: bold
 		text-transform: uppercase
 	&__current
 		background-color: #282828
-		padding: 18px 21px
+		padding: 14px 16px
 		border: 1px solid $white
 		border-radius: 15px
 		transition: border-radius .3s ease
@@ -123,25 +119,25 @@
 		left: 0
 		width: 100%
 		margin-top: -3px
-		padding-bottom: 23px
+		padding-bottom: 14px
 		opacity: 0
 		visibility: hidden
 		transition: opacity .3s ease, visibility .3s ease
 	&__link
 		color: $white
-		padding: 0 21px
+		padding: 0 16px
 		transition: color .3s ease
 		&:hover
 			color: $accent
 			text-decoration: none
 		&:not(:last-child)
-			margin-bottom: 15px
+			margin-bottom: 14px
 
 .mobile-menu
 	visibility: hidden
 	background-color: $accent
 	z-index: 10
-	padding: 17px 25px 26px 20px
+	padding: 18px 20px 26px
 	width: 350px
 	overflow-y: auto
 	position: fixed
@@ -157,7 +153,7 @@
 		display: flex
 		align-items: center
 	&__hamburger
-		padding: 10px 15px
+		padding: 10px
 		margin-left: -9px
 		margin-right: 4px
 		&.is-active .hamburger-inner, &.is-active .hamburger-inner::after, &.is-active .hamburger-inner::before
@@ -180,6 +176,7 @@
 					transform: translate3d(0, 6px, 0) rotate(-45deg)
 	&__logo
 		margin-right: 10px
+		max-width: 92px
 	.lang
 		margin-left: auto
 		margin-right: 0
@@ -190,27 +187,26 @@
 		flex-wrap: wrap
 		margin-left: -5.5px
 		margin-right: -5.5px
-		margin-bottom: -11px
+		margin-bottom: 16px
 	&__btn-wrap
 		flex: 0 0 50%
 		max-width: 50%
 		padding: 0 5.5px
-		margin-bottom: 11px
 	&__btn
 		display: block
 		width: 100%
-		font-size: 12px
-		padding: 18px 15px
+		font-size: 14px
+		padding: 14px
 		border-radius: 8px
 	&__contacts
 		margin-top: 9px
 		.contacts
 			&__row
-				margin-left: -4.5px
-				margin-right: -4.5px
+				margin-left: -5.5px
+				margin-right: -5.5px
 				margin-bottom: -9px
 			&__col
-				padding: 0 4.5px
+				padding: 0 5.5px
 				margin-bottom: 9px
 		.item-contacts
 			padding: 11px 10px
@@ -236,10 +232,10 @@
 			display: flex
 			align-items: center
 			width: 100%
-			font-size: 18px
+			font-size: 16px
 			font-weight: 500
 			color: $dark
-			padding: 10px 0
+			padding: 12px 0
 	svg
 		flex: 0 0 31px
 		width: 31px

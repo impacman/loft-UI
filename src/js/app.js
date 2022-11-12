@@ -61,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		effect: 'coverflow',
 		grabCursor: true,
 		centeredSlides: true,
-		slidesPerView: 'auto',
 		slideToClickedSlide: true,
 		coverflowEffect: {
 			rotate: 0,
@@ -72,13 +71,13 @@ document.addEventListener('DOMContentLoaded', function () {
 		},
 		breakpoints: {
 			768: {
-				coverflowEffect: {
-					rotate: 0,
-					stretch: 310,
-					depth: 150,
-					modifier: 1,
-					slideShadows: false,
-				},
+				slidesPerView: 1.5
+			},
+			992: {
+				slidesPerView: 1.8
+			},
+			1200: {
+				slidesPerView: 1.1
 			}
 		}
 	});
