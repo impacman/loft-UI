@@ -16,6 +16,12 @@ document.addEventListener('DOMContentLoaded', function () {
 		disableFocus: true,
 	}
 	MicroModal.init(mmopts);
+	// MicroModal.show('modal-registering', mmopts);
+	// MicroModal.show('modal-password-change', mmopts);
+	// MicroModal.show('modal-login', mmopts);
+	// MicroModal.show('modal-restore-password', mmopts);
+	// MicroModal.show('modal-1', mmopts);
+	// MicroModal.show('modal-2', mmopts);
 
 	const urlParams = new URLSearchParams(window.location.search);
 	const search = urlParams.get('stag');
@@ -434,7 +440,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			})
 			.then(data => {
 				console.log(data);
-				alert(document.querySelector(".register-msg").value);
+				MicroModal.show('modal-registering', mmopts);
 			})
 			.catch(err => {
 				err.json().then((msg) => {
@@ -668,7 +674,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			.then(res => {
 				if (res.ok) {
 					console.log(res);
-					alert(document.querySelector(".restore-msg").value)
+					MicroModal.show('modal-password-change', mmopts);
 					return res.json();
 				}
 				return Promise.reject(res);

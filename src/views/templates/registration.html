@@ -1,0 +1,106 @@
+{{> header title="Loft"}}
+
+<div class="content-page">
+	<section class="section-page">
+
+		<div class="stage" style="background-image: url(assets/img/main/bg.png);">
+			<div class="container">
+
+				<div class="stage__items">
+					<img src="assets/img/main/chip-1.png" alt="alt" class="stage__item rotating img-responsive">
+					<img src="assets/img/main/chip-2.png" alt="alt" class="stage__item rotating img-responsive">
+					<img src="assets/img/main/chip-3.png" alt="alt" class="stage__item rotating img-responsive">
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container">
+			<h2 class="page-title page-title_section">Регистрация</h2>
+
+			<form class="form-join form form_registration" action="/client/partner" name="formJoin">
+				<div class="form-join__controls form__controls">
+					<div class="form-join__row form__row row">
+						<div class="form-join__col form__col col-md-6">
+							<div class="form-join__group form__group">
+								<input type="text" class="form-join__control form__control control" autocomplete="off"
+									placeholder="Имя" name="company_name" data-required="shortStr"
+									data-invalid-message="Пожалуйста введите корректное имя"
+									data-blank="Не может быть пустым">
+							</div>
+						</div>
+						<div class="form-join__col form__col col-md-6">
+							<div class="form-join__group form__group">
+								<input type="email" class="form-join__control form__control control" autocomplete="off"
+									placeholder="E-mail" name="email" data-required="email"
+									data-invalid-message="Пожалуйста введите корректный E-mail"
+									data-blank="Не может быть пустым" data-wrong-email="Неверный email">
+							</div>
+						</div>
+						<div class="form-join__col form__col col-md-6">
+							<div class="form-join__group form__group">
+								<select class="form-join__select form__select select">
+									<option value="telegram" selected>Мессенджер</option>
+									<option value="skype">Skype</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-join__col form__col col-md-6">
+							<div class="form-join__group form__group">
+								<input type="text" class="form-join__control form__control control" autocomplete="off"
+									placeholder="Имя в мессенджере" name="telegram" data-required="shortStr"
+									data-invalid-message="Пожалуйста введите корректное имя"
+									data-blank="Не может быть пустым"
+									data-too-long-s="Слишком длинный (макс. 70 символов)">
+							</div>
+						</div>
+						<div class="form-join__col form__col col-md-6">
+							<div class="form-join__group form__group">
+								<input type="text" class="form-join__control form__control control" autocomplete="off"
+									placeholder="Имя в skype" name="skype" data-required="shortStr"
+									data-invalid-message="Пожалуйста введите корректное имя"
+									data-blank="Не может быть пустым"
+									data-too-long-s="Слишком длинный (макс. 70 символов)">
+							</div>
+						</div>
+						<div class="form-join__col form__col col-md-6">
+							<div class="form-join__group form__group">
+								<input type="password" class="form-join__control form__control control"
+									placeholder="Пароль" name="password" data-required="notEmpty"
+									data-invalid-message="Пожалуйста введите пароль" data-blank="Не может быть пустым"
+									data-too-short="Слишком короткий (мин. 6 символов)"
+									data-too-long="Слишком длинный (макс. 128 символов)">
+							</div>
+						</div>
+						<div class="form-join__col form__col col-md-6">
+							<div class="form-join__group form__group">
+								<input type="password" class="form-join__control form__control control"
+									placeholder="Повтор пароля" name="password_confirmation" data-required="notEmpty"
+									data-invalid-message="Пожалуйста введите пароль"
+									data-password-notmatches="Пароли не совпадают" data-blank="Не может быть пустым"
+									data-not-matches-server="Не совпадают">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-join__checkboxes form__checkboxes">
+					<label class="form-join__checkbox form__checkbox checkbox">
+						<input type="checkbox" class="checkbox__input" checked name="terms_accepted">
+						<span class="checkbox__box"></span>
+						<span class="checkbox__text">Согласие на обработку персональных данных</span>
+					</label>
+				</div>
+				<div class="form-join__btns form__btns">
+					<button type="submit" class="form-join__btn form__btn btn btn-lg btn-accent"
+						disabled>Присоединиться</button>
+				</div>
+				<div class="form-join__links form__links">
+					<a href="login.html" class="form-join__link form__link">У меня уже есть аккаунт</a>
+				</div>
+			</form>
+
+		</div>
+	</section>
+</div>
+
+{{> footer }}

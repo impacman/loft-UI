@@ -1,5 +1,5 @@
 .footer
-	padding: 80px 0
+	padding: 80px 0 40px
 	color: $white
 	margin-top: auto
 	&__container
@@ -8,15 +8,11 @@
 		align-items: center
 	&__col
 		padding: 0 15px
-		&_copyright
-			flex: 0 0 28%
-			max-width: 28%
+		flex: 0 0 calc(100% / 5)
+		max-width: calc(100% / 5)
 		&_socials
-			flex: 0 0 44%
-			max-width: 44%
-		&_links
-			flex: 0 0 24%
-			max-width: 24%
+			flex: 0 0 calc(100% / 2)
+			max-width: calc(100% / 2)
 	&__copyright
 		// @extend .title
 		font-size: 16px
@@ -27,7 +23,7 @@
 		list-style-type: none
 		display: flex
 		flex-wrap: wrap
-		justify-content: center
+		justify-content: flex-end
 		margin: 0 -5px 0
 		padding: 0
 		li

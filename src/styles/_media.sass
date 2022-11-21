@@ -31,11 +31,21 @@
 
 	.modal
 		&__close
+			z-index: 99
 			top: 15px
 			right: 15px
 			left: auto
+			width: 26px
+			height: 26px
 			svg
 				stroke: $black
+			&_dark
+				svg
+					stroke: $white
+	
+	.modal-content
+		&__inner
+			padding-top: 50px !important
 
 	.lang
 		&__current
@@ -70,10 +80,6 @@
 		.countries
 			margin-bottom: 52px
 
-	.form
-		&__link
-			font-size: 22px
-
 	.stage
 		&__item
 			&:nth-child(1)
@@ -104,7 +110,6 @@
 	.content
 		font-size: 16px
 		h2
-			font-size: 34px
 			margin-bottom: 30px
 		p, ul, ol
 			margin-bottom: 20px
@@ -124,8 +129,6 @@
 			padding: 0
 
 	.select
-		&::after
-			right: 30px
 		.option
 			padding: 20px 30px
 
@@ -163,6 +166,9 @@
 				margin-bottom: 20px
 		&__copyright
 			text-align: center
+		&__links
+			justify-content: center
+			margin-top: 24px
 
 	.item-social
 		flex: 0 0 60px
@@ -194,6 +200,10 @@
 			width: 100%;
 			margin: 0 auto;
 
+	.mm-modal
+		&__wrapper
+			padding: 100px 20px
+
 @media screen and (max-width: 991px)
 	// Общие стили и компоненты
 
@@ -210,7 +220,7 @@
 
 	.content
 		h2
-			font-size: 28px
+			font-size: 40px
 
 	.checkbox
 		&__box
@@ -227,8 +237,6 @@
 			margin-left: 12px
 
 	.select
-		&::after
-			right: 25px
 		.option
 			padding: 20px 25px
 			font-size: 18px
@@ -303,10 +311,6 @@
 			padding-top: 3px
 			padding-bottom: 13px
 
-	// Футер
-	.footer
-		padding: 75px 0 100px
-
 	.socials
 		margin-left: -5.5px
 		margin-right: -5.5px
@@ -376,19 +380,14 @@
 		&__img
 			max-width: 100%
 
-	.item-document
-		padding: 25px 25px 16px
-		&__icon-wrap
-			margin-right: 25px
+	.mm-modal
+		&__wrapper
+			padding: 100px 50px
 
 	.modal
 		&__close
 			width: 30px
 			height: 30px
-
-	.modal-content
-		&__inner
-			padding: 60px
 
 	.section-post-recommendations
 		margin: 100px 0 0
@@ -403,6 +402,8 @@
 		&-lg
 			font-size: 14px
 			border-radius: 12px
+		&-modal
+			padding: 14px 16px !important
 
 	.title
 		font-size: 14px
@@ -411,7 +412,7 @@
 	.content
 		font-size: 14px
 		h2
-			font-size: 22px
+			font-size: 36px
 
 	.section-title
 		font-size: 32px
@@ -420,8 +421,6 @@
 
 	.page-title
 		line-height: 1
-
-	.content-page
 
 	.checkbox
 		&__box
@@ -444,7 +443,7 @@
 
 	.select
 		&::after
-			right: 20px
+			right: 16px
 		.option
 			padding: 20px 20px
 
@@ -503,12 +502,10 @@
 
 	// Футер
 	.footer
-		padding: 60px 0 80px
 		&__col
 			&_links
 				margin-bottom: 10px
 		&__links
-			margin-top: 24px
 			a
 				font-size: 14px
 		&__copyright
@@ -642,20 +639,14 @@
 		&__controls
 			margin-bottom: 30px
 		&__restore-password-wrap
-			margin-bottom: 30px
+			margin: -18px 0 30px
 		&__links
 			margin-top: 30px
 
 	.item-document
-		padding: 20px 20px 14px
-		&__icon-wrap
-			flex: 0 0 40px
-			width: 40px
-			margin-right: 20px
-
-	.modal-content
-		&__inner
-			padding: 50px 30px
+		padding: 10px 16px
+		&__text
+			font-size: 16px
 
 @media screen and (max-width: 575px)
 	// Общие стили и компоненты
@@ -669,13 +660,13 @@
 	.content
 		font-size: 12px
 		h2
-			font-size: 16px
+			font-size: 22px
 			margin-bottom: 20px
 		p, ul, ol
 			margin-bottom: 15px
 
 	.content-page
-		padding: 110px 0 25px
+		padding: 30px 0 25px
 
 	.page-title
 		font-size: 32px
@@ -696,7 +687,6 @@
 
 	.select
 		&::after
-			right: 17px
 			width: 8px
 			height: 8px
 		.nice-select-dropdown
@@ -847,40 +837,98 @@
 	.documents
 		&__item
 			&:not(:last-child)
-				margin-bottom: 11px
+				margin-bottom: 8px
 
 	.item-document
-		border-radius: 10px
+		border-radius: 12px
 		&__icon-wrap
-			flex: 0 0 35px
-			width: 35px
+			flex: 0 0 30px
+			width: 30px
 
 	.modal
-		border-radius: 10px
+		border-radius: 0
 		&__close
-			width: 25px
-			height: 25px
-
-	.modal-auth
-		&__inner
-			padding: 50px 25px
-		&__title
-			margin-bottom: 30px
+			width: 20px
+			height: 20px
+			top: 10px
+			right: 10px
 
 	.modal-content
 		&__inner
-			padding: 50px 25px
+			padding-top: 30px !important
+
+	.modal-auth
+		&__inner
+			padding: 80px 16px 40px
+			background-color: rgba(39, 39, 39, .8)
+			min-height: 100%
+		&__title
+			margin-bottom: 42px
+
+	.modal-is-ok
+		&__inner
+			padding: 80px 16px 40px
+			background-color: rgba(39, 39, 39, .8)
+			min-height: 100%
+		&__title
+				margin-bottom: 32px
+		&__descr
+			font-size: 14px
+			max-width: 310px
+			width: 100%
+			margin: 0 auto 88px
+			& br 
+				display: none
+		&__wrap-img
+			max-width: 150px
 
 	.section-post-recommendations
 		margin: 60px 0 0
 
+	.mm-modal
+		&__wrapper
+			padding: 0
+
+@media screen and (max-width: 991px) and (max-height: 420px)
+	.mm-modal
+		&__wrapper
+			padding: 20px
+	
+	.modal
+		border-radius: 8px
+
+@media screen and (max-width: 991px) and (min-height: 570px)
+	.mobile-menu
+		&__btns
+			position: absolute
+			left: 20px
+			bottom: 115px
+			width: calc(100% - 30px)
+		&__contacts
+			position: absolute
+			left: 20px
+			bottom: 26px
+			width: calc(100% - 40px)
+
 // ≥375px
-@media (max-width: 375px)
+@media screen and (max-width: 382px)
+	.header
+		&__logo
+			& img
+				max-width: 34px
+			&-normal
+				display: none
+
+@media screen and (max-width: 375px)
 	.mobile-menu
 		width: auto
 		right: 40px
 
-@media (max-width: 350px)
+	.content
+		h2
+			font-size: 20px
+
+@media screen and (max-width: 350px)
 	.mobile-menu
 		width: 100%
 		right: 0
@@ -917,3 +965,9 @@
 	// Шапка
 	// Футер
 	// Секции
+
+@media screen and (min-width: 382px)
+	.header
+		&__logo
+			&-mini
+				display: none
