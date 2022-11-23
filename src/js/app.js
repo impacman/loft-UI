@@ -17,12 +17,12 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 	MicroModal.init(mmopts);
 
+	// Variables
 	const urlParams = new URLSearchParams(window.location.search);
 	const search = urlParams.get('stag');
 
-	if (search !== null) localStorage.setItem('stag', search);
+	let withCredentials = false;
 
-	// Variables
 	const header = document.querySelector('.header');
 	const headerLogo = document.querySelector('.header__logo');
 	const mobileMenu = document.querySelector('.mobile-menu');
@@ -33,6 +33,27 @@ document.addEventListener('DOMContentLoaded', function () {
 	const ticker = document.querySelector('.ticker');
 
 	const APIURL = 'https://www.loft.partners/api';
+
+	if (search !== null) localStorage.setItem('stag', search);
+			
+	if (search !== null || localStorage.getItem('stag') !== null) {
+		withCredentials = true;
+		doFetchStag(APIURL + '/client/partner/track_stag', {
+				method: 'POST',
+				body: JSON.stringify({
+					"stag": search || localStorage.getItem('stag'),
+				})
+			})
+			.then(res => {
+				if (res.ok) {
+					return res.json();
+				}
+				return Promise.reject(res);
+			})
+			.catch(err => {
+				console.log(err);
+			});
+	}
 
 	// Enquire.js
 	enquire
@@ -201,6 +222,17 @@ document.addEventListener('DOMContentLoaded', function () {
 		return fetch(url, {
 			headers: {
 				'Accept': 'application/json, text/plain, */*',
+				'Content-Type': 'application/json',
+			},
+			...settings
+		});
+	}
+
+	// Form for stag
+	function doFetchStag(url, settings = {}) {
+		return fetch(url, {
+			headers: {
+				'Accept': 'application/json',
 				'Content-Type': 'application/json',
 			},
 			...settings
@@ -420,7 +452,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 
 		const data = {
-			partner_user: user
+			partner_user: user,
+			withCredentials: withCredentials
 		}
 
 		doFetch(APIURL + formJoin.getAttribute('action'), {
@@ -442,31 +475,6 @@ document.addEventListener('DOMContentLoaded', function () {
 					showErrors(msg, formJoin);
 				})
 			});
-			
-		if (search !== null || localStorage.getItem('stag') !== null) {
-			doFetch(APIURL + '/client/partner/track_stag', {
-					method: 'POST',
-					headers: {
-						Accept: 'application/json',
-						'Content-Type': 'application/json',
-					},
-					body: JSON.stringify({
-						"stag": search || localStorage.getItem('stag'),
-						"partner_user": user
-					})
-				})
-				.then(res => {
-					if (res.ok) {
-						return res.json();
-					}
-					return Promise.reject(res);
-				})
-				.catch(err => {
-					err.json().then((msg) => {
-						showErrors(msg, formJoin);
-					})
-				});
-		}
 	}
 
 	if (formJoin) {
