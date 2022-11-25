@@ -2,12 +2,21 @@
 	background-color: $accent
 	color: #fff
 
+::-webkit-scrollbar
+    width: 0px
+    background: transparent
+
+*
+    scrollbar-width: none
+
 html
 	scroll-behavior: smooth
 	height: -webkit-fill-available
 
 html, body
 	overflow-x: hidden
+	overflow-y: scroll
+	-ms-overflow-style: none
 
 body
 	font-family: ttfirs-loft, sans-serif
