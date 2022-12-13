@@ -1,15 +1,15 @@
 import svg4everybody from 'svg4everybody';
-import Swiper, {
-	EffectCoverflow
-} from 'swiper';
+import Swiper, { EffectCoverflow } from 'swiper';
 import MicroModal from 'micromodal';
-import {
-	toggle
-} from 'slidetoggle';
+// import { toggle } from 'slidetoggle';
 import NiceSelect from "nice-select2/dist/js/nice-select2";
 import enquire from 'enquire.js';
+// import { initPreloader } from './components/init-preloader';
+import { initSpoller } from './components/spoller/init-spoller';
+import { initScrollTo } from './components/scroll-to/init-scroll-to';
+import { initClamp } from './components/clamp/init-clamp';
 
-document.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('DOMContentLoaded', function () {
 	svg4everybody();
 	const mmopts = {
 		awaitCloseAnimation: true,
@@ -22,6 +22,9 @@ document.addEventListener('DOMContentLoaded', function () {
 	// MicroModal.show('modal-restore-password', mmopts);
 	// MicroModal.show('modal-1', mmopts);
 	// MicroModal.show('modal-2', mmopts);
+	initSpoller();
+	initScrollTo();
+	initClamp();
 
 	const urlParams = new URLSearchParams(window.location.search);
 	const search = urlParams.get('stag');
@@ -112,16 +115,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// Click events
 	document.addEventListener('click', function (e) {
-		const faqHeader = e.target.closest('.item-faq__header');
-		if (faqHeader) {
-			const faq = faqHeader.closest('.item-faq');
-			const faqBody = faq.querySelector('.item-faq__body');
-			faq.classList.toggle('active');
-			toggle(faqBody, {
-				miliseconds: 300,
-				transitionFunction: 'ease',
-			});
-		}
+		// const faqHeader = e.target.closest('.item-faq__header');
+		// if (faqHeader) {
+		// 	const faq = faqHeader.closest('.item-faq');
+		// 	const faqBody = faq.querySelector('.item-faq__body');
+		// 	const faqs = document.querySelectorAll('.item-faq');
+
+		// 	faq.classList.toggle('active');
+
+		// 	toggle(faqBody, {
+		// 		miliseconds: 300,
+		// 		transitionFunction: 'ease',
+		// 		onOpen: () => {
+		// 			faq.classList.add('active-this');
+
+		// 			for (let i = 0; i < faqs.length; i++) {
+		// 				const el = faqs[i];
+		// 				console.log(el);
+						
+		// 				if (el.classList.contains('active')) {
+		// 					setTimeout(() => {
+		// 						// el.classList.remove('active');
+		// 					}, 1500);
+		// 				}
+		// 			}
+		// 		}
+		// 	});
+		// }
 
 		const hamburger = e.target.closest('.hamburger');
 		if (hamburger) {
@@ -372,7 +392,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	const regExpDic = {
 		shortStr: /^.{1,128}$/,
-		email: /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,10}|[0-9]{1,3})(\]?)$/,
+		email: /^([a-zA-Z0-9_\-+\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,10}|[0-9]{1,3})(\]?)$/,
 		notEmpty: /([^\s])/,
 	}
 
@@ -728,5 +748,4 @@ document.addEventListener('DOMContentLoaded', function () {
 			});
 		}
 	})
-
 });

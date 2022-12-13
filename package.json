@@ -64,9 +64,11 @@
   "dependencies": {
     "ansi-colors": "^4.1.1",
     "bootstrap": "^4.5.0",
+    "clamp-js": "^0.7.0",
     "current-device": "^0.10.1",
     "enquire.js": "^2.1.6",
     "jquery": "^3.5.1",
+    "line-clamp": "^1.0.0",
     "micromodal": "^0.4.10",
     "nativejs-select": "^1.0.7",
     "nice-select2": "^2.0.0",

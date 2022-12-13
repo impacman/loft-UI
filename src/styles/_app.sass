@@ -135,6 +135,9 @@
 		margin-bottom: 20px
 	.form[name=formRestorePassword] &
 		margin-top: 20px
+		margin-bottom: 20px
+	.form[name=formLogin] &
+		margin-top: 20px
 
 .control, .textarea, .select
 	@extend .title
@@ -472,8 +475,10 @@
 	text-align: center
 	padding-top: 100px
 	&__img-wrap
+		width: 56%
+		padding-bottom: 35%
 		position: relative
-		margin-bottom: 106px
+		margin: 0 auto 6.5%
 		&::before
 			content: ''
 			display: block
@@ -486,8 +491,12 @@
 			background: url(../img/main/light.png) center / contain no-repeat
 			pointer-events: none
 	&__img
-		width: 805px
-		margin: 0 auto
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		object-fit: contain
 	&__title
 		margin-bottom: 12px
 	&__text-wrap
@@ -500,7 +509,7 @@
 
 // Секция Преимущества
 .section-benefits
-	margin: 115px 0 40px
+	padding: 115px 0 40px
 
 .benefits
 	&__row
@@ -533,7 +542,7 @@
 
 // Секция Условия
 .section-terms
-	margin: 40px 0 45px
+	margin: 40px 0 0
 	.terms
 		margin-bottom: 80px
 	.countries
@@ -605,7 +614,7 @@
 
 // Секция Вопрос-Ответ
 .section-faq
-	margin: 40px 0 40px
+	padding: 85px 0 40px
 	.section-title
 		margin-bottom: 40px
 
@@ -670,6 +679,8 @@
 	margin: 40px 0 40px
 	.section-title
 		margin-bottom: 64px
+	.swiper-wrapper
+		align-items: center
 
 .slider-news
 	overflow: visible
@@ -842,6 +853,8 @@
 		align-items: center
 		height: 100%
 		padding: 220px 20px
+		&--documents
+			padding: 40px 20px
 	&__inner
 		flex: 1 1 auto
 
@@ -876,8 +889,12 @@
 	max-width: 800px
 	border-radius: 8px
 	border: none
+	&--documents
+		max-width: 1435px
 	&__inner
 		padding: 24px 16px 16px
+		&--documents
+			padding: 24px 30px
 
 .modal-auth
 	max-width: 660px

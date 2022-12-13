@@ -6,13 +6,10 @@
 			&::before
 				min-height: 3000px
 				top: 2500px
-	.showcase
-		&__img
-			width: 700px
 
 	.ticker
 		height: 117px
-
+		
 	.panel-sidebar
 		width: 60px
 		&:hover
@@ -74,6 +71,13 @@
 			width: 15px
 			height: 15px
 
+	.showcase
+		padding-top: 50px
+		&__img-wrap
+			width: 42%
+			padding-bottom: 24%
+			margin-bottom: 4.5%
+
 	.section-terms
 		.terms
 			margin-bottom: 63px
@@ -99,6 +103,14 @@
 				flex: 0 0 18px
 				width: 18px
 				height: 18px
+
+@media screen and (max-width: 1366px)
+	.showcase
+		padding-top: 20px
+		&__img-wrap
+			width: 50%
+			padding-bottom: 32%
+			margin-bottom: 4.5%
 
 @media screen and (max-width: 1200px)
 	// Общие стили и компоненты
@@ -203,6 +215,12 @@
 	.mm-modal
 		&__wrapper
 			padding: 100px 20px
+			&--documents
+				padding: 20px
+
+@media screen and (max-width: 1024px)
+	.page-title
+		font-size: 40px
 
 @media screen and (max-width: 991px)
 	// Общие стили и компоненты
@@ -272,7 +290,7 @@
 	// Шапка
 	.header
 		padding-left: 40px !important
-		position: relative
+		// position: relative
 		&__hamburger
 			display: block
 			position: absolute
@@ -320,17 +338,23 @@
 
 	// Секции
 	.section-showcase
+		padding-top: 78px
 		padding-bottom: 80px
+	
+	.content-page
+		padding-top: 100px
 
 	.showcase
 		&__img-wrap
+			width: 80%
+			padding-bottom: 50%
 			margin-bottom: 30px
 			&::before
 				width: 889px
 				height: 541px
 	
 	.section-benefits
-		margin-top: 85px
+		padding-top: 85px
 	
 	.item-benefit
 		&__img-wrap
@@ -383,6 +407,8 @@
 	.mm-modal
 		&__wrapper
 			padding: 100px 50px
+			&--documents
+				padding: 20px
 
 	.modal
 		&__close
@@ -430,7 +456,7 @@
 			border-radius: 4px
 		&__text
 			margin-left: 8px
-			font-size: 10px
+			font-size: 12px
 		
 	.form-join
 		&__controls
@@ -475,14 +501,14 @@
 		&__img-wrap
 			margin-bottom: 8px
 		&__date
-			font-size: 14px !important
-			width: 66px
+			font-size: 12px !important
+			width: 56px
 			padding: 6px 4px
 		&__title
 			margin-bottom: 8px
 			font-size: 14px !important
 		&__text-wrap
-			font-size: 10px
+			font-size: 12px
 
 	// Шапка
 	.header
@@ -532,11 +558,11 @@
 		padding-bottom: 32px
 	
 	.section-benefits
-		margin: 35px 0 16px
+		padding: 35px 0 16px
 	.section-terms
-		margin: 16px 0 16px
+		margin: 16px 0 0
 	.section-faq
-		margin: 16px 0 26px
+		padding: 32px 0 26px
 	.section-news
 		margin: 26px 0 16px
 	.section-callback
@@ -585,7 +611,7 @@
 		&__title
 			margin-bottom: 4px
 		&__text
-			font-size: 10px
+			font-size: 12px
 
 	.section-terms
 		.terms
@@ -627,7 +653,7 @@
 			margin: 0 auto 15px
 		&__title
 			margin-bottom: 5px
-			font-size: 10px
+			font-size: 12px
 		&__value
 			font-size: 12px
 
@@ -666,7 +692,7 @@
 			margin-bottom: 15px
 
 	.content-page
-		padding: 30px 0 25px
+		padding-bottom: 25px
 
 	.page-title
 		font-size: 32px
@@ -749,12 +775,12 @@
 	// Секции
 	.showcase
 		&__img-wrap
+			width: 90%
+			padding-bottom: 57%
 			margin-bottom: 32px
 			&::before
 				width: 565px
 				height: 289px
-		&__img
-			width: 340px
 		&__text-wrap
 			font-size: 14px
 			margin-bottom: 24px
@@ -809,7 +835,7 @@
 		&__title
 			font-size: 14px !important
 		&__body
-			font-size: 10px
+			font-size: 12px
 			padding: 0 8px 8px
 
 	.item-contacts
@@ -854,6 +880,10 @@
 			right: 10px
 
 	.modal-content
+		&--documents
+			border-radius: 20px !important
+			& .modal-content__inner--documents
+				border-radius: inherit
 		&__inner
 			padding-top: 30px !important
 
@@ -887,7 +917,7 @@
 
 	.mm-modal
 		&__wrapper
-			padding: 0
+			padding: 20px 0
 
 @media screen and (max-width: 991px) and (max-height: 420px)
 	.mm-modal
@@ -928,12 +958,20 @@
 		h2
 			font-size: 20px
 
-@media screen and (max-width: 350px)
+@media screen and (max-width: 310px)
 	.mobile-menu
 		width: 100%
 		right: 0
 
 /*==========  Mobile First  ==========*/
+@media screen and (min-width: 1600px) and (max-height: 924px)
+	.showcase
+		padding-top: 40px
+		&__img-wrap
+			width: 53%;
+			padding-bottom: 32%;
+			margin: 0 auto 4%;
+
 @media screen and (min-width: 1200px)
 	// Общие стили и компоненты
 	// Шапка
