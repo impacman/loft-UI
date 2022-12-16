@@ -1,21 +1,30 @@
 import svg4everybody from 'svg4everybody';
-import Swiper, {
-	EffectCoverflow
-} from 'swiper';
+import Swiper, { EffectCoverflow } from 'swiper';
 import MicroModal from 'micromodal';
-import {
-	toggle
-} from 'slidetoggle';
+// import { toggle } from 'slidetoggle';
 import NiceSelect from "nice-select2/dist/js/nice-select2";
 import enquire from 'enquire.js';
+// import { initPreloader } from './components/init-preloader';
+import { initSpoller } from './components/spoller/init-spoller';
+import { initScrollTo } from './components/scroll-to/init-scroll-to';
+import { initClamp } from './components/clamp/init-clamp';
 
-document.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('DOMContentLoaded', function () {
 	svg4everybody();
 	const mmopts = {
 		awaitCloseAnimation: true,
 		disableFocus: true,
 	}
 	MicroModal.init(mmopts);
+	// MicroModal.show('modal-registering', mmopts);
+	// MicroModal.show('modal-password-change', mmopts);
+	// MicroModal.show('modal-login', mmopts);
+	// MicroModal.show('modal-restore-password', mmopts);
+	// MicroModal.show('modal-1', mmopts);
+	// MicroModal.show('modal-2', mmopts);
+	initSpoller();
+	initScrollTo();
+	initClamp();
 
 	// Variables
 	const urlParams = new URLSearchParams(window.location.search);
@@ -82,24 +91,23 @@ document.addEventListener('DOMContentLoaded', function () {
 		effect: 'coverflow',
 		grabCursor: true,
 		centeredSlides: true,
-		slidesPerView: 'auto',
 		slideToClickedSlide: true,
 		coverflowEffect: {
 			rotate: 0,
-			stretch: 200,
-			depth: 200,
+			stretch: 150,
+			depth: 150,
 			modifier: 1,
 			slideShadows: false,
 		},
 		breakpoints: {
 			768: {
-				coverflowEffect: {
-					rotate: 0,
-					stretch: 450,
-					depth: 200,
-					modifier: 1,
-					slideShadows: false,
-				},
+				slidesPerView: 1.5
+			},
+			992: {
+				slidesPerView: 1.8
+			},
+			1200: {
+				slidesPerView: 1.1
 			}
 		}
 	});
@@ -128,16 +136,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// Click events
 	document.addEventListener('click', function (e) {
-		const faqHeader = e.target.closest('.item-faq__header');
-		if (faqHeader) {
-			const faq = faqHeader.closest('.item-faq');
-			const faqBody = faq.querySelector('.item-faq__body');
-			faq.classList.toggle('active');
-			toggle(faqBody, {
-				miliseconds: 300,
-				transitionFunction: 'ease',
-			});
-		}
+		// const faqHeader = e.target.closest('.item-faq__header');
+		// if (faqHeader) {
+		// 	const faq = faqHeader.closest('.item-faq');
+		// 	const faqBody = faq.querySelector('.item-faq__body');
+		// 	const faqs = document.querySelectorAll('.item-faq');
+
+		// 	faq.classList.toggle('active');
+
+		// 	toggle(faqBody, {
+		// 		miliseconds: 300,
+		// 		transitionFunction: 'ease',
+		// 		onOpen: () => {
+		// 			faq.classList.add('active-this');
+
+		// 			for (let i = 0; i < faqs.length; i++) {
+		// 				const el = faqs[i];
+		// 				console.log(el);
+						
+		// 				if (el.classList.contains('active')) {
+		// 					setTimeout(() => {
+		// 						// el.classList.remove('active');
+		// 					}, 1500);
+		// 				}
+		// 			}
+		// 		}
+		// 	});
+		// }
 
 		const hamburger = e.target.closest('.hamburger');
 		if (hamburger) {
@@ -399,7 +424,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	const regExpDic = {
 		shortStr: /^.{1,128}$/,
-		email: /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,10}|[0-9]{1,3})(\]?)$/,
+		email: /^([a-zA-Z0-9_\-+\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,10}|[0-9]{1,3})(\]?)$/,
 		notEmpty: /([^\s])/,
 	}
 
@@ -468,7 +493,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			})
 			.then(data => {
 				console.log(data);
-				alert(document.querySelector(".register-msg").value);
+				MicroModal.show('modal-registering', mmopts);
 			})
 			.catch(err => {
 				err.json().then((msg) => {
@@ -677,7 +702,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			.then(res => {
 				if (res.ok) {
 					console.log(res);
-					alert(document.querySelector(".restore-msg").value)
+					MicroModal.show('modal-password-change', mmopts);
 					return res.json();
 				}
 				return Promise.reject(res);
@@ -731,5 +756,4 @@ document.addEventListener('DOMContentLoaded', function () {
 			});
 		}
 	})
-
 });

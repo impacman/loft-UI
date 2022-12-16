@@ -2,12 +2,21 @@
 	background-color: $accent
 	color: #fff
 
+::-webkit-scrollbar
+    width: 0px
+    background: transparent
+
+*
+    scrollbar-width: none
+
 html
 	scroll-behavior: smooth
 	height: -webkit-fill-available
 
 html, body
 	overflow-x: hidden
+	overflow-y: scroll
+	-ms-overflow-style: none
 
 body
 	font-family: ttfirs-loft, sans-serif
@@ -58,8 +67,9 @@ body
     height: auto
 
 .container
-	padding-left: 20px
-	padding-right: 20px
+	max-width: 1480px !important
+	width: 100% !important
+	padding: 0 20px
 
 .justify-content-center
 	justify-content: center

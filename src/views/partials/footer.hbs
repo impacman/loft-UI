@@ -53,7 +53,7 @@
 	<nav class="panel-sidebar__nav">
 		<ul class="panel-sidebar__list">
 			<li>
-				<a href="#">
+				<a href="#" data-scroll-link="home">
 					<svg role="img">
 						<use href="assets/img/svg-sprite/sprite.svg#house"></use>
 					</svg>
@@ -61,7 +61,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="index.html#benefits">
+				<a href="#" data-scroll-link="benefits">
 					<svg role="img">
 						<use href="assets/img/svg-sprite/sprite.svg#medal"></use>
 					</svg>
@@ -69,7 +69,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="index.html#faq">
+				<a href="#" data-scroll-link="faq">
 					<svg role="img">
 						<use href="assets/img/svg-sprite/sprite.svg#faq"></use>
 					</svg>
@@ -85,7 +85,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="index.html#contacts">
+				<a href="#" data-scroll-link="contacts">
 					<svg role="img">
 						<use href="assets/img/svg-sprite/sprite.svg#email"></use>
 					</svg>
@@ -111,18 +111,18 @@
 				<div class="modal-auth__inner modal__inner">
 					<h2 class="modal-auth__title page-title">Войти</h2>
 
-					<form class="modal-auth__form form-auth form form_dark" action="/client/partner/sign_in" name="modalFormLogin">
+					<form class="modal-auth__form form-auth form" action="/client/partner/sign_in" name="modalFormLogin">
 						<input type="hidden" value="Invalid email, password or authentication code." class="single-error">
 						<div class="form-auth__controls form__controls">
 							<div class="form-auth__row form__row row">
 								<div class="form-auth__col form__col col-12">
 									<div class="form-auth__group form__group">
-										<input type="text" class="form-auth__control form__control control control_dark" autocomplete="off" placeholder="Имя" name="company_name" data-required="shortStr" data-invalid-message="Пожалуйста введите корректное имя">
+										<input type="text" class="form-auth__control form__control control" autocomplete="off" placeholder="Имя" name="company_name" data-required="shortStr" data-invalid-message="Пожалуйста введите корректное имя">
 									</div>
 								</div>
 								<div class="form-auth__col form__col col-12">
 									<div class="form-auth__group form__group">
-										<input type="password" class="form-auth__control form__control control control_dark" placeholder="Пароль" name="password" data-required="notEmpty" data-invalid-message="Пожалуйста введите пароль">
+										<input type="password" class="form-auth__control form__control control" placeholder="Пароль" name="password" data-required="notEmpty" data-invalid-message="Пожалуйста введите пароль">
 									</div>
 								</div>
 							</div>
@@ -131,14 +131,14 @@
 							<button type="button" class="form-auth__restore-password form__restore-password">Восстановить пароль</button>
 						</div>
 						<div class="form-auth__btns form__btns">
-							<button type="submit" class="form-auth__btn form__btn btn btn-lg btn-accent" disabled>Войти</button>
+							<button type="submit" class="form-auth__btn form__btn btn btn-lg btn-accent btn-modal" disabled>Войти</button>
 						</div>
 						<div class="form-auth__links form__links">
 							<a href="https://www.loft.partners/partner" class="form-auth__link form__link">У меня нет аккаунта</a>
 						</div>
 					</form>
 				</div>
-				<button class="modal__close" aria-label="Close modal" data-micromodal-close>
+				<button class="modal__close modal__close_dark" aria-label="Close modal" data-micromodal-close>
 					<svg role="img">
 						<use href="assets/img/svg-sprite/sprite.svg#close"></use>
 					</svg>
@@ -160,17 +160,17 @@
 							<div class="form-auth__row row">
 								<div class="form-auth__col form__col col-12">
 									<div class="form-auth__group form__group">
-										<input type="email" class="form-auth__control form__control control control_dark" autocomplete="off" placeholder="Введите ваш e-mail" name="email" data-required="email" data-invalid-message="Пожалуйста введите корректный E-mail" data-blank="Не может быть пустым" data-not-found="Не найден">
+										<input type="email" class="form-auth__control form__control control" autocomplete="off" placeholder="Введите ваш e-mail" name="email" data-required="email" data-invalid-message="Пожалуйста введите корректный E-mail" data-blank="Не может быть пустым" data-not-found="Не найден">
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="form-auth__btns form__btns">
-							<button type="submit" class="form-auth__btn form__btn btn btn-lg btn-accent" disabled>Сменить пароль</button>
+							<button type="submit" class="form-auth__btn form__btn btn btn-lg btn-accent btn-modal" disabled>Сменить пароль</button>
 						</div>
 					</form>
 				</div>
-				<button class="modal__close" aria-label="Close modal" data-micromodal-close>
+				<button class="modal__close modal__close_dark" aria-label="Close modal" data-micromodal-close>
 					<svg role="img">
 						<use href="assets/img/svg-sprite/sprite.svg#close"></use>
 					</svg>
@@ -180,6 +180,48 @@
 	</div>
 </div>
 
-<script src="{{assets}}/js/main.js"></script>
+<div class="mm-modal micromodal-slide" id="modal-registering" aria-hidden="true">
+	<div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+		<div class="mm-modal__wrapper" role="dialog" aria-modal="true">
+			<div class="mm-modal__inner modal-is-ok modal">
+				<div class="modal-is-ok__inner modal__inner">
+					<h2 class="modal-is-ok__title modal-is-ok__title_is-ok page-title">Благодарим за регистрацию!</h2>
+					<p class="modal-is-ok__descr">Письмо с подтверждением уже <br>отправлено на Ваш email.</p>
+					<div class="modal-is-ok__wrap-img">
+						<img src="assets/img/icons/email.svg" alt="we">
+					</div>
+				</div>
+				<button class="modal__close modal__close_dark" aria-label="Close modal" data-micromodal-close>
+					<svg role="img">
+						<use href="assets/img/svg-sprite/sprite.svg#close"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="mm-modal micromodal-slide" id="modal-password-change" aria-hidden="true">
+	<div class="mm-modal__overlay" tabindex="-1" data-micromodal-close>
+		<div class="mm-modal__wrapper" role="dialog" aria-modal="true">
+			<div class="mm-modal__inner modal-is-ok modal">
+				<div class="modal-is-ok__inner modal__inner">
+					<h2 class="modal-is-ok__title modal-is-ok__title_is-ok page-title">Смена пароля!</h2>
+					<p class="modal-is-ok__descr">Письмо со сменой пароля, отправлено на <br>Ваш email.</p>
+					<div class="modal-is-ok__wrap-img">
+						<img src="assets/img/icons/email.svg" alt="we">
+					</div>
+				</div>
+				<button class="modal__close modal__close_dark" aria-label="Close modal" data-micromodal-close>
+					<svg role="img">
+						<use href="assets/img/svg-sprite/sprite.svg#close"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="{{assets}}/js/main.js?893747236456"></script>
 </body>
 </html>

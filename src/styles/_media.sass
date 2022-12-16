@@ -7,98 +7,49 @@
 				min-height: 3000px
 				top: 2500px
 
-	.btn
-		&-lg
-			padding: 17px 10px
-			width: 230px
-			font-size: 18px
-
-	.container
-		max-width: 1200px
-
-	.showcase
-		&__img
-			width: 700px
-
 	.ticker
 		height: 117px
-
+		
 	.panel-sidebar
-		width: 65px
+		width: 60px
 		&:hover
 			width: 230px
 		&__list
 			a
-				font-size: 20px
+				font-size: 18px
+				padding: 12px 15px
 		svg
-			flex: 0 0 35px
-			width: 35px
-			max-height: 40px
-
-	.section-title
-		font-size: 70px
-		margin-bottom: 64px
-
-	.title
-		font-size: 22px
-
-	.page-title
-		font-size: 51px
-		margin-bottom: 40px
-
-	.card
-		&_lg
-			padding: 50px
-			.card
-				&__date
-					font-size: 26px
-					padding: 13px 27px
-		&_sm
-			.card
-				&__title, &__date
-					font-size: 22px
+			flex: 0 0 28px
+			width: 28px
+			max-height: 28px
 
 	.content
 		font-size: 18px
 
 	.modal
 		&__close
+			z-index: 99
 			top: 15px
 			right: 15px
 			left: auto
+			width: 26px
+			height: 26px
 			svg
 				stroke: $black
-
-	.header
-		padding: 20px 0 0
-		&__logo
-			img
-				max-width: 160px
-		&__btn
-			padding: 17px 30px
-			width: auto
-		&__lang
-			margin-right: 20px
+			&_dark
+				svg
+					stroke: $white
+	
+	.modal-content
+		&__inner
+			padding-top: 50px !important
 
 	.lang
-		flex: 0 0 130px
-		width: 130px
-		&__current, &__link
-			font-size: 18px
 		&__current
-			padding: 15px 18px
 			&::after
 				right: 18px
-		&__link
-			padding: 0 18px
-		&__flag-wrap
-			flex: 0 0 29px
-			width: 29px
-			height: 20px
-			margin-right: 13px
 		&__dropdown
-			margin-top: -1px
-			padding-bottom: 15px
+			margin-top: -2px
 
 	.benefits
 		&__row
@@ -111,12 +62,6 @@
 			&:not(:last-child)
 				margin-bottom: 15px
 
-	.item-faq
-		&__header
-			padding: 20px 30px
-		&__body
-			padding: 0 30px 35px
-
 	.toggle
 		flex: 0 0 40px
 		width: 40px
@@ -126,40 +71,18 @@
 			width: 15px
 			height: 15px
 
-	.section-showcase
-		padding: 0 0 132px
-
-	.section-benefits, .section-terms, .section-faq, .section-news, .section-callback
-		margin: 132px 0
-	.section-contacts
-		margin: 132px 0 0
-
-	.item-term
-		padding: 30px 10px 45px
-		&__icon
-			max-width: 80px
-			margin: 0 auto 25px
+	.showcase
+		padding-top: 50px
+		&__img-wrap
+			width: 42%
+			padding-bottom: 24%
+			margin-bottom: 4.5%
 
 	.section-terms
 		.terms
 			margin-bottom: 63px
 		.countries
 			margin-bottom: 52px
-
-	.item-contacts
-		padding: 40px 20px
-		&__icon
-			max-width: 60px
-
-	.form
-		&__link
-			font-size: 22px
-
-	.form-join
-		&__controls
-			margin-bottom: 40px
-		&__checkboxes
-			margin-bottom: 40px
 
 	.stage
 		&__item
@@ -181,29 +104,24 @@
 				width: 18px
 				height: 18px
 
+@media screen and (max-width: 1366px)
+	.showcase
+		padding-top: 20px
+		&__img-wrap
+			width: 50%
+			padding-bottom: 32%
+			margin-bottom: 4.5%
+
 @media screen and (max-width: 1200px)
 	// Общие стили и компоненты
-	.container
-		max-width: 960px
-
 	body
 		&.body-home
 			&::before
 				top: 2900px
 
-	.btn
-		&-lg
-			padding: 20px 30px
-			width: auto
-			font-size: 18px
-
-	.section-title
-		margin-bottom: 58px
-
 	.content
 		font-size: 16px
 		h2
-			font-size: 34px
 			margin-bottom: 30px
 		p, ul, ol
 			margin-bottom: 20px
@@ -217,13 +135,12 @@
 				flex: 0 0 16px
 				width: 16px
 				height: 16px
-
-	.control, .select, .textarea
-		padding: 20px 30px
+		
+	.form-join
+		&__checkboxes
+			padding: 0
 
 	.select
-		&::after
-			right: 30px
 		.option
 			padding: 20px 30px
 
@@ -240,16 +157,10 @@
 		&__items
 			display: none
 
-	.lang
-		&__current
-			padding: 17px 21px
-
 	// Шапка
 	.mobile-menu
 		&__btn
 			width: 100%
-			font-size: 12px
-			padding: 18px 15px
 
 	// Футер
 	.footer
@@ -267,6 +178,9 @@
 				margin-bottom: 20px
 		&__copyright
 			text-align: center
+		&__links
+			justify-content: center
+			margin-top: 24px
 
 	.item-social
 		flex: 0 0 60px
@@ -282,8 +196,6 @@
 			&::before
 				width: 1051px
 				height: 666px
-		&__text-wrap
-			font-size: 27.5px
 
 	.countries
 		&__col
@@ -294,10 +206,24 @@
 		.stage
 			background-size: contain
 
-@media screen and (max-width: 992px)
+	.item-benefit
+		&__content 
+			max-width: 330px;
+			width: 100%;
+			margin: 0 auto;
+
+	.mm-modal
+		&__wrapper
+			padding: 100px 20px
+			&--documents
+				padding: 20px
+
+@media screen and (max-width: 1024px)
+	.page-title
+		font-size: 40px
+
+@media screen and (max-width: 991px)
 	// Общие стили и компоненты
-	.container
-		max-width: 720px
 
 	body
 		font-size: 15px
@@ -306,19 +232,13 @@
 		&-lg
 			font-size: 16px
 
+	.title
+		font-size: 23px
+		line-height: 1.1
+
 	.content
 		h2
-			font-size: 28px
-
-	.section-title
-		font-size: 60px
-		margin-bottom: 52px
-
-	.title
-		font-size: 19px
-
-	.page-title
-		font-size: 44px
+			font-size: 40px
 
 	.checkbox
 		&__box
@@ -334,12 +254,7 @@
 		&__text
 			margin-left: 12px
 
-	.control, .select, .textarea
-		padding: 20px 25px
-
 	.select
-		&::after
-			right: 25px
 		.option
 			padding: 20px 25px
 			font-size: 18px
@@ -358,23 +273,6 @@
 		&__text
 			font-size: 18px
 
-	.card
-		&_lg
-			padding: 40px
-			.card
-				&__date
-					font-size: 22px
-					padding: 11px 24px
-		&_md
-			padding: 30px
-			.card
-				&__date
-					padding: 15px 30px 14px
-		&_sm
-			.card
-				&__title, &__date
-					font-size: 19px
-
 	.ticker
 		height: 104px
 		animation-duration: 20s
@@ -391,15 +289,14 @@
 
 	// Шапка
 	.header
-		padding: 20px 0 0
-		&__logo
-			img
-				max-width: 150px
+		padding-left: 40px !important
+		// position: relative
 		&__hamburger
 			display: block
-		&__btn
-			&_login
-				display: none
+			position: absolute
+			top: 50%
+			left: 10px
+			transform: translateY(-50%)
 
 	.lang
 		flex: 0 0 105px
@@ -432,15 +329,6 @@
 			padding-top: 3px
 			padding-bottom: 13px
 
-	.mobile-menu
-		&__btn
-			font-size: 12px
-			padding: 18px 15px
-
-	// Футер
-	.footer
-		padding: 75px 0 100px
-
 	.socials
 		margin-left: -5.5px
 		margin-right: -5.5px
@@ -450,47 +338,52 @@
 
 	// Секции
 	.section-showcase
-		padding: 77px 0 116px
+		padding-top: 78px
+		padding-bottom: 80px
+	
+	.content-page
+		padding-top: 100px
 
 	.showcase
 		&__img-wrap
+			width: 80%
+			padding-bottom: 50%
 			margin-bottom: 30px
 			&::before
 				width: 889px
 				height: 541px
-		&__text-wrap
-			font-size: 23px
+	
+	.section-benefits
+		padding-top: 85px
 	
 	.item-benefit
 		&__img-wrap
 			height: 116px
-
-	.item-faq
-		&__header
-			padding: 20px 30px
-		&__body
-			padding: 0 30px 30px
+		&__text 
+			font-size: 16.5px;
 
 	.contacts
 		&__row
-			margin-left: -5px
-			margin-right: -5px
-			margin-bottom: -10px
+			margin-left: -8px
+			margin-right: -8px
+			margin-bottom: -16px
 		&__col
-			padding: 0 5px
-			margin-bottom: 10px
+			padding: 0 8px
+			margin-bottom: 16px
 
 	.item-contacts
 		padding: 30px 20px
-		&__icon
-			max-width: 50px
-			margin: 0 auto 20px
 
 	.section-terms
 		.terms
 			margin-bottom: 56px
 		.countries
 			margin-bottom: 44px
+
+	.item-term
+		padding: 40px 10px 30px
+		&__icon
+			max-height: 56px
 
 	.countries
 		&__col
@@ -511,32 +404,22 @@
 		&__img
 			max-width: 100%
 
-	.item-document
-		padding: 25px 25px 16px
-		&__icon-wrap
-			margin-right: 25px
+	.mm-modal
+		&__wrapper
+			padding: 100px 50px
+			&--documents
+				padding: 20px
 
 	.modal
 		&__close
 			width: 30px
 			height: 30px
 
-	.modal-content
-		&__inner
-			padding: 60px
-
-	.section-benefits, .section-terms, .section-faq, .section-news, .section-callback
-		margin: 114px 0
-	.section-contacts
-		margin: 114px 0 0
-
 	.section-post-recommendations
 		margin: 100px 0 0
 
-@media screen and (max-width: 768px)
+@media screen and (max-width: 767px)
 	// Общие стили и компоненты
-	.container
-		max-width: 540px
 
 	body
 		font-size: 13px
@@ -544,26 +427,26 @@
 	.btn
 		&-lg
 			font-size: 14px
-			border-radius: 8px
+			border-radius: 12px
+		&-modal
+			padding: 14px 16px !important
+
+	.title
+		font-size: 14px
+		line-height: 1.3
 
 	.content
 		font-size: 14px
 		h2
-			font-size: 22px
+			font-size: 36px
 
 	.section-title
-		font-size: 50px
-		line-height: 1
-		margin-bottom: 46px
-
-	.title
-		font-size: 17px
-
-	.content-page
-		padding: 130px 0 25px
+		font-size: 32px
+		margin-bottom: 16px !important
+		line-height: 1.3
 
 	.page-title
-		font-size: 37px
+		line-height: 1
 
 	.checkbox
 		&__box
@@ -572,15 +455,21 @@
 			height: 25px
 			border-radius: 4px
 		&__text
-			margin-left: 12px
+			margin-left: 8px
+			font-size: 12px
+		
+	.form-join
+		&__controls
+			margin-bottom: 16px
+		&__checkboxes
+			margin-bottom: 24px
 
 	.control, .select, .textarea
-		padding: 18px 20px
-		border-radius: 10px
+		padding: 10px 16px
 
 	.select
 		&::after
-			right: 20px
+			right: 16px
 		.option
 			padding: 20px 20px
 
@@ -588,7 +477,7 @@
 		&__row
 			margin-bottom: -10px
 		&__col
-			margin-bottom: 10px
+			margin-bottom: 12px
 		&__link, &__restore-password
 			font-size: 16px
 		&__msg
@@ -604,78 +493,103 @@
 		&__text
 			font-size: 14px
 
-	.card
-		&_lg
-			padding: 30px
-			.card
-				&__img-wrap
-					margin-bottom: 25px
-				&__date
-					font-size: 18px
-					padding: 9px 21px
-				&__title
-					margin-bottom: 20px
-		&_md
-			padding: 25px
-			.card
-				&__text-wrap
-					margin-bottom: 25px
-				&__date
-					padding: 10px 25px
-		&_sm
-			.card
-				&__title, &__date
-					font-size: 17px
-
 	.ticker
 		height: 90px
 
+	.card
+		padding: 8px 8px 16px
+		&__img-wrap
+			margin-bottom: 8px
+		&__date
+			font-size: 12px !important
+			width: 56px
+			padding: 6px 4px
+		&__title
+			margin-bottom: 8px
+			font-size: 14px !important
+		&__text-wrap
+			font-size: 12px
+
 	// Шапка
 	.header
+		&__container
+			padding: 0 16px
 		&__logo
 			img
-				max-width: 130px
+				max-width: 110px
+		&__btn
+			&:not(:last-of-type)
+				margin-right: 8px
 		&__hamburger
-			.hamburger-box
-				width: 30px
+			left: 6px
 			.hamburger-inner
 				&, &::before, &::after
 					width: 30px
 
-	.mobile-menu
-		&__btn
-			font-size: 12px
-			padding: 18px 15px
-
 	// Футер
 	.footer
-		padding: 60px 0 80px
+		&__col
+			&_links
+				margin-bottom: 10px
+		&__links
+			a
+				font-size: 14px
+		&__copyright
+			font-size: 14px
+
+	.socials
+		margin-left: -4px
+		margin-right: -4px
+		margin-bottom: -10px
+		&__item
+			margin: 0 4px 10px
 
 	.item-social
-		flex: 0 0 49px
-		width: 49px
-		height: 49px
+		flex: 0 0 40px
+		width: 40px
+		height: 40px
+		overflow: hidden
 		&__icon
-			max-width: 25px
-			height: 20px
+			max-width: 16px
+			height: auto
 
 	// Секции
 	.section-showcase
-		padding: 77px 0 83px
+		padding-bottom: 32px
+	
+	.section-benefits
+		padding: 35px 0 16px
+	.section-terms
+		margin: 16px 0 0
+	.section-faq
+		padding: 32px 0 26px
+	.section-news
+		margin: 26px 0 16px
+	.section-callback
+		margin: 16px 0 16px
+	.section-contacts
+		margin: 26px 0 0
 
 	.showcase
+		padding-top: 0
+		margin-top: -20px
 		&__img-wrap
 			&::before
 				width: 727px
 				height: 416px
+		&__title
+			margin-bottom: 16px
 		&__text-wrap
-			font-size: 18.5px
+			font-size: 16px
+			line-height: 1.3;
 
 	.benefits
 		&__row
-			margin-bottom: -48px
+			max-width: 430px
+			width: 100%
+			margin: 0 auto -32px
 		&__col
-			margin-bottom: 48px
+			margin-bottom: 32px
 
 	.item-benefit
 		flex-direction: row
@@ -691,8 +605,13 @@
 		&__img
 			max-height: 105px
 			margin: 0 auto
+		&__content 
+			max-width: none
+			margin: 0
 		&__title
-			margin-bottom: 15px
+			margin-bottom: 4px
+		&__text
+			font-size: 12px
 
 	.section-terms
 		.terms
@@ -702,19 +621,19 @@
 
 	.terms
 		&__row
-			margin-left: -5px
-			margin-right: -5px
-			margin-bottom: -10px
+			margin-left: -8px
+			margin-right: -8px
+			margin-bottom: -16px
 		&__col
-			padding: 0 5px
-			margin-bottom: 10px
+			padding: 0 8px
+			margin-bottom: 16px
 
 	.item-term
-		border-radius: 10px
-		padding: 25px 10px 35px
+		border-radius: 12px
+		padding: 16px 10px 8px
 		&__icon
-			max-width: 50px
-			margin: 0 auto 20px
+			max-height: 26px
+			margin-bottom: 16px
 
 	.toggle
 		flex: 0 0 30px
@@ -730,49 +649,32 @@
 	.item-contacts
 		padding: 25px 10px
 		&__icon
-			max-width: 38px
 			max-height: 32px
 			margin: 0 auto 15px
 		&__title
 			margin-bottom: 5px
+			font-size: 12px
+		&__value
+			font-size: 12px
 
 	.item-country
 		&__img
 			max-width: 40px
 
-	.form-join
-		&__controls
-			margin-bottom: 30px
-		&__checkboxes
-			margin-bottom: 30px
-		&__links
-			margin-top: 30px
-
 	.form-auth
 		&__controls
 			margin-bottom: 30px
 		&__restore-password-wrap
-			margin-bottom: 30px
+			margin: -18px 0 30px
 		&__links
 			margin-top: 30px
 
 	.item-document
-		padding: 20px 20px 14px
-		&__icon-wrap
-			flex: 0 0 40px
-			width: 40px
-			margin-right: 20px
+		padding: 10px 16px
+		&__text
+			font-size: 16px
 
-	.modal-content
-		&__inner
-			padding: 50px 30px
-
-	.section-benefits, .section-terms, .section-faq, .section-news, .section-callback
-		margin: 100px 0
-	.section-contacts
-		margin: 100px 0 0
-
-@media screen and (max-width: 576px)
+@media screen and (max-width: 575px)
 	// Общие стили и компоненты
 	body
 		font-size: 12px
@@ -781,34 +683,22 @@
 				min-height: 2000px
 				top: 2000px
 
-	.btn
-		&-lg
-			padding: 18px 15px
-			font-size: 12px
-		&-sm
-			font-size: 12px
-			padding: 18px 15px
-
 	.content
 		font-size: 12px
 		h2
-			font-size: 16px
+			font-size: 22px
 			margin-bottom: 20px
 		p, ul, ol
 			margin-bottom: 15px
 
 	.content-page
-		padding: 110px 0 25px
-
-	.section-title
-		font-size: 40px
-		margin-bottom: 40px
-
-	.title
-		font-size: 14px
+		padding-bottom: 25px
 
 	.page-title
 		font-size: 32px
+
+	.control, .select, .textarea
+		border-width: 1px
 
 	.checkbox
 		&__box
@@ -820,16 +710,9 @@
 				flex: 0 0 13px
 				width: 13px
 				height: 13px
-		&__text
-			margin-left: 9px
-
-	.control, .select, .textarea
-		padding: 14px 17px
-		border-width: 1px
 
 	.select
 		&::after
-			right: 17px
 			width: 8px
 			height: 8px
 		.nice-select-dropdown
@@ -854,48 +737,6 @@
 		&__text
 			font-size: 12px
 
-	.card
-		&_sm
-			padding: 15px
-			.card
-				&__img-wrap
-					margin-bottom: 13px
-				&__date
-					font-size: 14px
-				&__title
-					font-size: 14px
-					margin-bottom: 13px
-				&__text-wrap
-					font-size: 12px
-					margin-bottom: 15px
-		&_lg
-			padding: 20px
-			.card
-				&__img-wrap
-					margin-bottom: 20px
-					border-radius: 15px
-				&__date
-					font-size: 16px
-					padding: 8px 20px 7px
-					border-radius: 0 15px 0 15px
-				&__title
-					font-size: 16px
-					margin-bottom: 15px
-		&_md
-			padding: 15px 15px 24px
-			.card
-				&__img-wrap
-					margin-bottom: 11px
-				&__title
-					margin-bottom: 10px
-				&__text-wrap
-					margin-bottom: 20px
-				&__date
-					padding: 8px 15px
-					border-radius: 0 10px 0 10px
-				&__btn
-					padding: 13px 15px
-
 	.ticker
 		height: 66px
 		animation-duration: 26s
@@ -905,10 +746,10 @@
 
 	// Шапка
 	.header
-		padding: 17px 0 0
+		padding: 16px 0 16px 32px !important
 		&__logo
 			img
-				max-width: 93px
+				max-width: 92px
 		&__hamburger
 			.hamburger-box
 				width: 22px
@@ -929,39 +770,34 @@
 
 	// Футер
 	.footer
-		padding: 40px 0
+		padding: 32px 0 16px
 
 	// Секции
-	.section-showcase
-		padding: 77px 0 50px
-
 	.showcase
 		&__img-wrap
-			margin-bottom: 20px
+			width: 90%
+			padding-bottom: 57%
+			margin-bottom: 32px
 			&::before
 				width: 565px
 				height: 289px
-		&__img
-			width: 340px
 		&__text-wrap
 			font-size: 14px
-			margin-bottom: 40px
-
-	.benefits
-		&__row
-			margin-bottom: -30px
-		&__col
-			margin-bottom: 30px
+			margin-bottom: 24px
 
 	.item-benefit
 		&__img-wrap
-			flex: 0 0 110px
-			width: 110px
-			margin-right: 18px
+			flex: 0 0 114px
+			width: 114px
+			margin-right: 16px
 		&__img
 			max-height: 78px
-		&__title
-			margin-bottom: 8px
+
+	.benefits
+		&__row
+			max-width: 370px
+		&__col
+			padding: 0
 
 	.section-terms
 		.terms
@@ -970,10 +806,7 @@
 			margin-bottom: 30px
 
 	.item-term
-		padding: 17px 10px 25px
-		&__icon
-			max-width: 37px
-			margin: 0 auto 15px
+		padding: 12px 5px 11px
 
 	.toggle
 		flex: 0 0 20px
@@ -991,21 +824,26 @@
 				margin-bottom: 8px
 
 	.item-faq
-		border-radius: 10px
+		border-radius: 12px
 		&.active
 			.item-faq
 				&__header
 					padding-bottom: 8px
 		&__header
-			padding: 13px 8px 13px 18px
+			color: red
+			padding: 8px
+		&__title
+			font-size: 14px !important
 		&__body
-			padding: 0 44px 13px 18px
+			font-size: 12px
+			padding: 0 8px 8px
 
 	.item-contacts
 		padding: 13px 10px
-		border-radius: 10px
+		border-radius: 12px
 		&__icon
 			margin: 0 auto 10px
+			max-height: 26px
 		&__title
 			margin-bottom: 3px
 
@@ -1025,45 +863,115 @@
 	.documents
 		&__item
 			&:not(:last-child)
-				margin-bottom: 11px
+				margin-bottom: 8px
 
 	.item-document
-		border-radius: 10px
+		border-radius: 12px
 		&__icon-wrap
-			flex: 0 0 35px
-			width: 35px
+			flex: 0 0 30px
+			width: 30px
 
 	.modal
-		border-radius: 10px
+		border-radius: 0
 		&__close
-			width: 25px
-			height: 25px
+			width: 20px
+			height: 20px
+			top: 10px
+			right: 10px
+
+	.modal-content
+		&--documents
+			border-radius: 20px !important
+			& .modal-content__inner--documents
+				border-radius: inherit
+		&__inner
+			padding-top: 30px !important
 
 	.modal-auth
 		&__inner
-			padding: 50px 25px
+			padding: 80px 16px 40px
+			background-color: rgba(39, 39, 39, .8)
+			min-height: 100%
 		&__title
-			margin-bottom: 30px
+			margin-bottom: 42px
 
-	.modal-content
+	.modal-is-ok
 		&__inner
-			padding: 50px 25px
-
-	.section-benefits, .section-terms, .section-faq, .section-news, .section-callback
-		margin: 60px 0
-	.section-contacts
-		margin: 60px 0 0
+			padding: 80px 16px 40px
+			background-color: rgba(39, 39, 39, .8)
+			min-height: 100%
+		&__title
+				margin-bottom: 32px
+		&__descr
+			font-size: 14px
+			max-width: 310px
+			width: 100%
+			margin: 0 auto 88px
+			& br 
+				display: none
+		&__wrap-img
+			max-width: 150px
 
 	.section-post-recommendations
 		margin: 60px 0 0
 
+	.mm-modal
+		&__wrapper
+			padding: 20px 0
+
+@media screen and (max-width: 991px) and (max-height: 420px)
+	.mm-modal
+		&__wrapper
+			padding: 20px
+	
+	.modal
+		border-radius: 8px
+
+@media screen and (max-width: 991px) and (min-height: 570px)
+	.mobile-menu
+		&__btns
+			position: absolute
+			left: 20px
+			bottom: 115px
+			width: calc(100% - 30px)
+		&__contacts
+			position: absolute
+			left: 20px
+			bottom: 26px
+			width: calc(100% - 40px)
+
 // ≥375px
-@media (max-width: 375px)
+@media screen and (max-width: 382px)
+	.header
+		&__logo
+			& img
+				max-width: 34px
+			&-normal
+				display: none
+
+@media screen and (max-width: 375px)
 	.mobile-menu
 		width: auto
 		right: 40px
-	
+
+	.content
+		h2
+			font-size: 20px
+
+@media screen and (max-width: 310px)
+	.mobile-menu
+		width: 100%
+		right: 0
+
 /*==========  Mobile First  ==========*/
+@media screen and (min-width: 1600px) and (max-height: 924px)
+	.showcase
+		padding-top: 40px
+		&__img-wrap
+			width: 53%;
+			padding-bottom: 32%;
+			margin: 0 auto 4%;
+
 @media screen and (min-width: 1200px)
 	// Общие стили и компоненты
 	// Шапка
@@ -1077,6 +985,14 @@
 	// Секции
 
 @media screen and (min-width: 768px)
+	.page-title
+		& br
+			display: none
+
+	.showcase
+		&__text-wrap
+			& br
+				display: none
 	// Общие стили и компоненты
 	// Шапка
 	// Футер
@@ -1087,3 +1003,9 @@
 	// Шапка
 	// Футер
 	// Секции
+
+@media screen and (min-width: 382px)
+	.header
+		&__logo
+			&-mini
+				display: none
